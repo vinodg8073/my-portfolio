@@ -1,20 +1,19 @@
 <template>
   <div class="home">
-    
     <SidePanelVue></SidePanelVue>
-    <!-- <hello-world></hello-world> -->
+    <main-content-vue></main-content-vue>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
 import SidePanelVue from '@/components/SidePanel.vue';
+import MainContentVue from '@/components/MainContent.vue';
 export default {
   name: 'HomeView',
   components: {
     SidePanelVue,
-    // HelloWorld
+    MainContentVue
   }
 }
 </script>

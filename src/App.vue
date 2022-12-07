@@ -4,16 +4,14 @@
     <router-link to="/about">About</router-link>
   </nav> -->
   <!-- <side-panel-vue></side-panel-vue> -->
-  <span>  <router-view class=""/></span>
+  <router-view class=""/>
 
 </template>
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-// import SidePanelVue from '@/components/SidePanel.vue';
+
 export default {
   components: {
-    // SidePanelVue
   }
 }
 </script>
@@ -23,7 +21,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 
