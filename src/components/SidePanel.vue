@@ -18,8 +18,8 @@
 
         <div class="view">
            <h2>View</h2>
-           <p><a href="/profile"><i class="icon fa-solid fa-user-circle"></i> Profile</a></p>
-           <p><a href="/profile"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
+           <p><a href="#profile"><i class="icon fa-solid fa-user-circle"></i> Profile</a></p>
+           <p><a href="#experience"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-code"></i> Skills</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-graduation-cap"></i> Education</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-award"></i> Achievement</a></p> 
@@ -44,6 +44,7 @@ h3,h2{
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid black;
     float: left;
+    text-align: center;
 }
 .profile-img{
     width: 100px;
@@ -72,7 +73,6 @@ a{
     padding-left: 10%;
 }
 .icon {
-    /* border: 2px solid white; */
     width: 30px;
     font-size: 20px;
 }
