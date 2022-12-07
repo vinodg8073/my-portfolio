@@ -17,10 +17,16 @@
         </div>
 
         <div class="view">
-            <h3>Go to--</h3>
-           <h3><a href="/profile"><i class="fa-solid fa-user-circle"></i> Profile</a></h3> 
-            <!-- <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-brands fa-facebook"></i>  -->
+           <h2>View</h2>
+           <p><a href="/profile"><i class="icon fa-solid fa-user-circle"></i> Profile</a></p>
+           <p><a href="/profile"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-code"></i> Skills</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-graduation-cap"></i> Education</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-award"></i> Achievement</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-certificate"></i> Certification</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-diagram-project"></i> Projects</a></p> 
+           <p><a href="/profile"><i class="icon fa-solid fa-cubes"></i> Activities</a></p> 
+            
         </div>
     </div>
 </template>
@@ -33,7 +39,7 @@ h3,h2{
     margin-block-end: 10px;
 }
 .profile{
-    width: 25%;
+    width: 23%;
     color: aliceblue;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid black;
@@ -45,7 +51,7 @@ h3,h2{
 }
 .btn{
     margin: 5px;
-    width: 150px;
+    width: 130px;
     height: 35px;
     font-size: 25px;
     border: none;
@@ -64,5 +70,13 @@ a{
 .view{
     text-align: left;
     padding-left: 10%;
+}
+.icon {
+    /* border: 2px solid white; */
+    width: 30px;
+    font-size: 20px;
+}
+p{
+    font-size: 20px;
 }
 </style>
