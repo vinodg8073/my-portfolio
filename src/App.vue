@@ -3,15 +3,18 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav> -->
-  <!-- <side-panel-vue></side-panel-vue> -->
-  <router-view class=""/>
+  <side-panel-vue></side-panel-vue>
+  <div class="mainview"><router-view /></div>
+  
 
 </template>
 <script>
 // @ is an alias to /src
-
+import SidePanelVue from './components/SidePanel.vue';
 export default {
+  
   components: {
+    SidePanelVue
   }
 }
 </script>
@@ -24,17 +27,9 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
+.mainview{
+  width: 76.3%;
+  float: right;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

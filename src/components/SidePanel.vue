@@ -1,21 +1,8 @@
-<script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    export default {
-        
-        methods: {
-    goto(refName) {
-        var element = this.$refs[refName];
-        console.log(element);
-        var top = element.offsetTop;
-        window.scrollTo(0, top);
-    }
-}
-    }
 
-</script>
 
 <template>
-    <div class="profile">
+    
+    <div class="profile" >
         <img class="profile-img" src="@/assets/profile.jpg" alt="">
         <h1 style="margin-bottom: 0px;">Vinod G</h1>
         <h3 >Full Stack Software Developer</h3>
@@ -27,21 +14,35 @@
 
         <div class="view">
            <h2>View</h2>
-           <a href="#profile"><i class="icon fa-solid fa-user-circle"></i> Profile</a>
-           <p><a href="#experience"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
+          
+           <p><a href="/"><i class="icon fa-solid fa-user-circle"></i> Profile</a></p>
+           <p><a href="/experience"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-code"></i> Skills</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-graduation-cap"></i> Education</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-award"></i> Achievement</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-certificate"></i> Certification</a></p> 
            <p><a href="/profile"><i class="icon fa-solid fa-diagram-project"></i> Projects</a></p> 
-           <!-- <button @click="goto('porto')"> -->
             <p><a href=""><i class="icon fa-solid fa-cubes"></i> Activities</a></p>
-        <!-- </button>  -->
             
         </div>
     </div>
 </template>
 
+<script>
+
+   
+    export default {
+        methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+        console.log('working');
+      window.scrollTo(0, top);
+    }
+  }
+
+    }
+</script>
 
 
 <style lang="css" scoped>
