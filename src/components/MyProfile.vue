@@ -1,8 +1,6 @@
 <template>
     <div class="parent" ref="ie">
-        <!-- <button @click="goto('ii')">ii</button>
-        <button @click="goto('iii')">iii</button> -->
-            <div class="profile-header">
+             <div class="profile-header">
                 <div class="header-left"><img class="profile-img" src="@/assets/profile.jpg" alt=""/></div>
                 <div class="header-right">
                 <p><strong><i>VINOD G</i></strong></p>
