@@ -1,8 +1,14 @@
 
 
 <template>
-    
-    <div class="profile" >
+    <nav class="sideBar">
+        <div class="bar">
+
+            <input type="checkbox" id="menubar">
+        <label for="menubar"><i class="fa-solid fa-bars"></i></label>
+  </div>
+ 
+          <div class="profile" >
         <img class="profile-img" src="@/assets/profile.jpg" alt="">
         <h1 style="margin-bottom: 0px;">Vinod G</h1>
         <h3 >Full Stack Software Developer</h3>
@@ -11,46 +17,67 @@
             <button class="btn"><a href="">View</a></button>
             <button class="btn"><a href="">Download</a></button>
         </div>
-
-        <div class="view">
-           <h2>View</h2>
-          
-           <p><a href="/"><i class="icon fa-solid fa-user-circle"></i> Profile</a></p>
-           <p><a href="/experience"><i class="icon fa-solid fa-briefcase"></i> Experience</a></p> 
-           <p><a href="/profile"><i class="icon fa-solid fa-code"></i> Skills</a></p> 
-           <p><a href="/profile"><i class="icon fa-solid fa-graduation-cap"></i> Education</a></p> 
-           <p><a href="/profile"><i class="icon fa-solid fa-award"></i> Achievement</a></p> 
-           <p><a href="/profile"><i class="icon fa-solid fa-certificate"></i> Certification</a></p> 
-           <p><a href="/profile"><i class="icon fa-solid fa-diagram-project"></i> Projects</a></p> 
-            <p><a href=""><i class="icon fa-solid fa-cubes"></i> Activities</a></p>
-            
-        </div>
+        <h2 class="menu-title">View</h2>
     </div>
+    
+        <div class="view">
+           
+          <ul>
+           <li><button @click="scrollToPage('profile')"><i class="icon fa-solid fa-user-circle"></i> Profile</button></li>
+           <li><button @click="scrollToPage('experience')"><i class="icon fa-solid fa-briefcase"></i> Experience</button></li> 
+           <li><button @click="scrollToPage('education')"><i class="icon fa-solid fa-graduation-cap"></i> Education</button></li> 
+           <li><button @click="scrollToPage('skills')"> <i class="icon fa-solid fa-code"></i> Skills</button></li> 
+           <li><button @click="scrollToPage('achievements')"><i class="icon fa-solid fa-award"></i> Achievement</button></li> 
+           <li><button @click="scrollToPage('certification')"><i class="icon fa-solid fa-certificate"></i> Certification</button></li> 
+           <li><button @click="scrollToPage('projects')"><i class="icon fa-solid fa-diagram-project"></i> Projects</button></li> 
+            <li><button @click="scrollToPage('activities')"><i class="icon fa-solid fa-cubes"></i> Activities</button></li>
+        </ul> 
+        </div>
+    
+</nav>
 </template>
 
 <script>
 
-   
+//    import mainPageVue from './mainPage.vue';
     export default {
-        methods: {
-    goto(refName) {
-      var element = this.$refs[refName];
-      var top = element.offsetTop;
-        console.log('working');
-      window.scrollTo(0, top);
-    }
-  }
+//         methods: {
+//     goto(refName) {
+//       var element = this.$refs[refName];
+//       var top = element.offsetTop;
+//         console.log('working');
+//       window.scrollTo(0, top);
+//     }
+//   }
+methods: {
+         openModal() {
+         }
+      }
 
     }
 </script>
 
 
 <style lang="css" scoped>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+#menubar, .bar {
+    /* display: none; */
+}
+
+#menubar:checked ~ button{
+    color: aqua;
+}
+.menu-title{
+ margin-bottom: 0px;
+ text-align: center;
+}
 h3,h2{
     margin-block-start:10px;
     margin-block-end: 10px;
 }
-.profile{
+.sideBar{
     position: fixed;
     width: 23%;
     color: aliceblue;
@@ -75,6 +102,14 @@ h3,h2{
 a{
     text-decoration: none;
     color: aliceblue;
+    font-size: 20px;
+}
+button{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
     
 }
 .resume{
@@ -88,9 +123,53 @@ a{
 }
 .icon {
     width: 30px;
-    font-size: 20px;
 }
-p{
+li{
+    list-style: none;
     font-size: 20px;
+    padding: 10px;
+}
+li:hover{
+    transform: translateX(4px);
+    transition-duration: .4s;
+}
+ul{
+    padding: 0;
+    margin-top: -5px;
+}
+
+@media (min-width:0) and (max-width: 979px) {
+    .profile{
+        display: none;
+    }
+.view{
+    
+    position: relative;
+    width: 100%;
+    border: 2px solid black;
+    float: left;
+    text-align: center;
+    /* left: %; */
+    padding: 0;
+    border: none;
+    color: blue;
+}
+
+.sideBar{
+    float: none;
+    width: 100%;
+}
+
+#menubar,.bar {
+    display:block;
+    float: right;
+    margin-right: 30px;
+    font-size: 30px;
+    color: rgba(205, 28, 28, 0.636);
+    /* background: rgba(0, 0, 0, 0.8); */
+}
+
+
+  
 }
 </style>

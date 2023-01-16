@@ -1,37 +1,37 @@
 <template>
-    <div>
-        <h2><strong><i>Skills :</i></strong></h2>
+    <div class="skills">
+        <h1><strong><i>Skills :</i></strong></h1>
         <ul>
             <li>
-                <span class="bar html">HTML</span>
+                <h3 class="bar">HTML</h3><div class="html right"></div>
                 <span class="percentage">85%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar css">CSS</span>
+                <h3 class="bar">CSS</h3><div class="p70 right" style="background-color: dodgerblue;"></div>
                 <span class="percentage">70%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar js">JAVASCRIPT</span>
+                <h3 class="bar">JAVASCRIPT</h3><div class="js right p75" style="background-color: yellow;"></div>
                 <span class="percentage">75%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar vue">VUE JS</span>
+                <h3 class="bar">VUE JS</h3><div class="vue right p75" style="background-color: green;"></div>
                 <span class="percentage">75%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar sjs">STENCIL JS</span>
+                <h3 class="bar sjs">STENCIL JS</h3><div class="right p65" style="background-color: rgba(0, 0, 0, 0.7);"></div>
                 <span class="percentage">65%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar java">JAVA</span>
+                <h3 class="bar">JAVA</h3><div class="java right"></div>
                 <span class="percentage">85%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar spring">SPRING</span>
+                <h3 class="bar spring">SPRING</h3><div class="p70 right" style="background-color: lightgreen;"></div>
                 <span class="percentage">70%</span>
-            </li>
+            </li><br>
             <li>
-                <span class="bar bcss">BOOTSTRAP</span>
+                <h3 class="bar bcss">BOOTSTRAP</h3><div class="p70 right" style="background-color: purple;"></div>
                 <span class="percentage">70%</span>
             </li>
         </ul>
@@ -45,30 +45,51 @@
 </script>
 
 <style scoped>
+.p70{
+    width: 40%;
+}
+.p65{
+    width: 35%;
+}
+.p75
+{
+    width: 45%;
+}
+.right{
+    float: left;
+    height: 10px;
+    border-radius: 10px;
+    margin: 7px 0px 0px 0px;
+}
 .skill-bar{
 background-color: aquamarine;
 }
+
 .bar{
-    height: 2px;
     border-radius: 15px;
     margin: 3px 0;
-
-    /* position: relative;
-    animation: skill-bar;
-    animation-duration: 1s; */
-
-
+    width:20%;
+    margin: 0px;
+    float: left;
 }
 .html,.java{
-    width: 85%;
+    width: 55%;
     background-color: red;
 }
 .percentage{
-    position: absolute;
     bottom: 2px;
-    /* right: 0; */
+    padding-left:10px;
 }
+
 li{
     list-style: none;
+}
+.skills{
+    background: rgb(245, 248, 248);
+    padding: 20px;
+}
+.css{
+    background-color: dodgerblue;
+    width: 40%;
 }
 </style>
