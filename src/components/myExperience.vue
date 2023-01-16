@@ -2,7 +2,7 @@
     <div class="experience">
         <i><h1>Experience : </h1></i>
         <div class="exp-company" >
-            <h2><strong>Amiti Software Technologies Private Limited  <i class="exp-year">(may 2022 - present)</i></strong></h2>
+            <h2><strong>Amiti Software Technologies Private Limited  <i class="exp-year">(May 2022 - Present)</i></strong></h2>
             <p class="exp-content">
                 <ul>
                     <li>
@@ -30,7 +30,7 @@ div{
     /* width: 76.5%; */
     /* float: right; */
     background: rgb(245, 248, 248);
-    height: 700px;
+    /* height: 700px; */
     /* border: 10px solid red; */
 }
 

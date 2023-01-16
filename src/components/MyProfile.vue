@@ -73,6 +73,8 @@
 </script>
 
 <style scoped>
+
+
 .bio-text{
     font-size: large;
 }
@@ -155,13 +157,13 @@ span{
     font-size: 30px;
 }
 
-.content-left{
-    float: left;
+ /* .content-left{ */
+    /* float: left; */
     /* size: 400px 300px; */
-    justify-content: left;
+    /* justify-content: left; */
 
-    border-right: 3px solid black;
-}
+    /* border-right: 3px solid black; */
+/* } */ 
 .bio{
     text-align: center;
     display: inline-block;
@@ -186,15 +188,33 @@ span{
     padding: 10px;
     padding-top: 0px;
     min-height: 340px;
+    display: grid;
+    grid-template-areas: "profile-header profile-header"
+                          "content-left content-right";
 }
 .content-left{
-    float: left; 
-    width: 48%;
+    /* float: left;  */
+    /* width: 48%; */
     border-right: 5px solid black;
     margin-right: 10px;
 }
 .content-right{
-    width: 48%;
+    /* width: 48%; */
 }
+@media (min-width:0) and (max-width: 675px) {
+    .profile-content{
+    
+    display: grid;
+    grid-template-areas: "profile-header"
+                          "content-left"
+                          "content-right";
+}
+.content-left{
+    
+
+    border-right: 0;
+}
+}
+
 
 </style>

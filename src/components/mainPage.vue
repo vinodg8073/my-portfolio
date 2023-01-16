@@ -1,5 +1,9 @@
 <template>
     <div>
+      <button @click="goto('div1')">Div 1</button>
+    <button @click="goto('div2')">Div 2</button>
+    <button @click="goto('div3')">Div 3</button>
+    <br/>
         <!-- <button @click="goto('ifi')">btn</button> -->
     <!-- <side-panel-vue></side-panel-vue> -->
     <my-profile-vue></my-profile-vue>
@@ -7,6 +11,11 @@
     <my-skills></my-skills>
     </div>
     
+    
+
+    <div class="div" ref="div1">This is Div 1</div>
+    <div class="div" ref="div2">This is Div 2</div>
+    <div class="div" ref="div3">This is Div 3</div>
 
 </template>
 
@@ -26,15 +35,25 @@ export default {
     
   },
   
+  
   methods: {
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
-        console.log('working');
+
       window.scrollTo(0, top);
     }
-    
   }
+
 }
 </script>
+
+<style scoped>
+.div {
+  height: 1000px;
+  padding: 20px;
+  border: 2px solid yellow;
+}
+</style>
+
 

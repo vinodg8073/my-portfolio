@@ -34,5 +34,9 @@ export default {
   width: 76.3%;
   float: right;
 }
-
+@media (min-width:0) and (max-width: 979px) {
+  .mainview{
+  width: 100%;
+}
+}
 </style>
