@@ -198,9 +198,7 @@ span{
     border-right: 5px solid black;
     margin-right: 10px;
 }
-.content-right{
-    /* width: 48%; */
-}
+
 @media (min-width:0) and (max-width: 675px) {
     .profile-content{
     
@@ -213,6 +211,34 @@ span{
     
 
     border-right: 0;
+}
+.header-left{
+    float: none;
+    display: flex;
+    justify-content    : center;
+    /* justify-self: center; */
+    align-content: center;
+    margin: auto;
+
+}
+.profile-img{
+    
+    justify-self: center ;
+    width: 300px;
+    height: 320px;
+    margin: auto;
+}
+ul{
+    padding-left: 0px;
+}
+li{
+    padding: 7px;
+}
+p{
+    margin: 0px;
+}
+a{
+    font-size: 15px;
 }
 }
 

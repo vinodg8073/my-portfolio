@@ -7,8 +7,10 @@
         <!-- <button @click="goto('ifi')">btn</button> -->
     <!-- <side-panel-vue></side-panel-vue> -->
     <my-profile-vue></my-profile-vue>
+    <my-education></my-education>
     <my-experience> </my-experience>
     <my-skills></my-skills>
+    <my-certificates-vue></my-certificates-vue>
     </div>
     
     
@@ -25,13 +27,17 @@
 import MyProfileVue from '@/components/MyProfile.vue';
 import myExperience from '@/components/myExperience.vue';
 import MySkills from './mySkills.vue';
+import MyCertificatesVue from './MyCertificates.vue';
+import myEducation from './myEducation.vue';
 export default {
   name: 'HomeView',
   components: {
     // SidePanelVue,
     MyProfileVue,
     myExperience,
-    MySkills
+    MySkills,
+    MyCertificatesVue,
+    myEducation
     
   },
   
