@@ -71,6 +71,10 @@
     margin: auto;
  }
 
+ h1{
+    margin: 0;
+    padding: 0 0 10px 0;
+ }
  .details{
     display: contents;
     align-items: center;

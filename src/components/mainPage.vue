@@ -10,7 +10,9 @@
     <my-education></my-education>
     <my-experience> </my-experience>
     <my-skills></my-skills>
+    <myAchievments></myAchievments>
     <my-certificates-vue></my-certificates-vue>
+    <myProjects></myProjects>
     </div>
     
     
@@ -29,15 +31,19 @@ import myExperience from '@/components/myExperience.vue';
 import MySkills from './mySkills.vue';
 import MyCertificatesVue from './MyCertificates.vue';
 import myEducation from './myEducation.vue';
+import myAchievments from './myAchievments.vue';
+import myProjects from './myProjects.vue';
 export default {
   name: 'HomeView',
   components: {
-    // SidePanelVue,
+    
     MyProfileVue,
     myExperience,
     MySkills,
     MyCertificatesVue,
-    myEducation
+    myEducation,
+    myAchievments,
+    myProjects,
     
   },
   
