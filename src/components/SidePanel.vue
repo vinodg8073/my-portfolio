@@ -83,6 +83,7 @@ h3,h2{
     border: 2px solid black;
     float: left;
     text-align: center;
+    height: 100%;
 }
 .profile-img{
     width: 100px;
