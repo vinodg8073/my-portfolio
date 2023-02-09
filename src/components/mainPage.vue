@@ -1,9 +1,9 @@
 <template>
     <div>
-      <button @click="goto('div1')">Div 1</button>
+      <!-- <button @click="goto('div1')">Div 1</button>
     <button @click="goto('div2')">Div 2</button>
     <button @click="goto('div3')">Div 3</button>
-    <br/>
+    <br/> -->
         <!-- <button @click="goto('ifi')">btn</button> -->
     <!-- <side-panel-vue></side-panel-vue> -->
     <my-profile-vue></my-profile-vue>
@@ -13,13 +13,14 @@
     <myAchievments></myAchievments>
     <my-certificates-vue></my-certificates-vue>
     <myProjects></myProjects>
+    <myActivities></myActivities>
     </div>
     
     
 
-    <div class="div" ref="div1">This is Div 1</div>
+    <!-- <div class="div" ref="div1">This is Div 1</div>
     <div class="div" ref="div2">This is Div 2</div>
-    <div class="div" ref="div3">This is Div 3</div>
+    <div class="div" ref="div3">This is Div 3</div> -->
 
 </template>
 
@@ -33,6 +34,7 @@ import MyCertificatesVue from './MyCertificates.vue';
 import myEducation from './myEducation.vue';
 import myAchievments from './myAchievments.vue';
 import myProjects from './myProjects.vue';
+import myActivities from './myActivities.vue';
 export default {
   name: 'HomeView',
   components: {
@@ -44,7 +46,7 @@ export default {
     myEducation,
     myAchievments,
     myProjects,
-    
+    myActivities
   },
   
   
@@ -62,9 +64,13 @@ export default {
 
 <style scoped>
 .div {
-  height: 1000px;
+   height: 1000px;
   padding: 20px;
-  border: 2px solid yellow;
+  border: 2px solid yellow; 
+  background-color:  rgb(245, 248, 248);;
+}
+.projects-list{
+  /* background-color:  rgb(245, 248, 248); */
 }
 </style>
 
