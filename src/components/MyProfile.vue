@@ -6,13 +6,13 @@
                 <p><strong><i>VINOD G</i></strong></p>
                 <h1>Full Stack Software Developer</h1>
                 <ul>
-                    <li><a href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i> G-Mail</a></li>
+                    <li><a href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i> <p class="p">G-Mail</p></a></li>
                     <span> | </span>
-                    <li><a href="tel:8073869494"><i class="icon fa-solid fa-phone"></i> Contact</a></li>
+                    <li><a href="tel:8073869494"><i class="icon fa-solid fa-phone"></i> <p class="p">Contact</p></a></li>
                     <span> | </span>
-                    <li><a href="https://www.linkedin.com/in/vinod-g-981259194/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/vinod-g-981259194/"><i class="fa-brands fa-linkedin"></i> <p class="p">LinkedIn</p></a></li>
                     <span> | </span>
-                    <li><a href="https://github.com/vinodg8073"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                    <li><a href="https://github.com/vinodg8073"><i class="fa-brands fa-github"></i> <p class="p">GitHub</p></a></li>
                     
                 </ul>
             </div>
@@ -46,7 +46,7 @@
                     <tr>
                         <th>Address</th>
                         <td> : </td>
-                        <td><address>Bheemasandra, SSMC Post, Tumkur, Karnataka 572107</address></td>
+                        <td><i> Bheemasandra, SSMC Post, Tumkur, Karnataka 572107</i></td>
                     </tr>
                 </table>
                 <h3 class="ul">You can get in touch with me here :</h3>
@@ -102,7 +102,8 @@ table{
 }
 .profile-header{
     background: rgba(0, 0, 0, 0.1);
-    /* display: block; */
+    display: grid;
+    grid-template-columns: 25% 75%;
 }
 .profile-img{
     margin: 20px;
@@ -111,7 +112,8 @@ table{
     height: 320px;
 }
 .header-left{
-    float: left;
+    /* float: left; */
+    margin: auto;
 }
 .header-right{
     text-align: center;
@@ -138,13 +140,19 @@ li{
 a{
     text-decoration: none;
     color: black;
+    padding: 8px 25px;
 }
 
-li:hover{
+li a:hover{
     
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0,0.8);
     border-radius: 10px;
     color: aliceblue;
+    padding: 8px 25px;
+    margin-top: -3px;
+    border: 2px solid rgb(89, 89, 232);
+    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
+    /* box-shadow: 0 8px 32px 0 rgba(221, 24, 24, 0.9); */
 }
 a:hover{
     border-radius: 10px;
@@ -156,14 +164,6 @@ a:hover{
 span{
     font-size: 30px;
 }
-
- /* .content-left{ */
-    /* float: left; */
-    /* size: 400px 300px; */
-    /* justify-content: left; */
-
-    /* border-right: 3px solid black; */
-/* } */ 
 .bio{
     text-align: center;
     display: inline-block;
@@ -173,7 +173,6 @@ span{
     border-radius: 10px;
     min-width: 40%;
     margin: 5px;
-    /* margin: auto; */
     
 }
 .bio:hover{
@@ -184,39 +183,43 @@ span{
 }
 .profile-content{
     width: 100%;
-    display: flex;
-    padding: 10px;
-    padding-top: 0px;
+    padding: 15px;
     min-height: 340px;
     display: grid;
-    grid-template-areas: "profile-header profile-header"
-                          "content-left content-right";
+    grid-template-columns: 1fr 1fr;
 }
 .content-left{
-    /* float: left;  */
-    /* width: 48%; */
     border-right: 5px solid black;
     margin-right: 10px;
+    padding-right: 10px;
 }
 
-@media (min-width:0) and (max-width: 675px) {
+.content-right{
+    padding-right: 15px;
+}
+
+p.p{
+    font-size: 20px;
+    display: inline;
+}
+@media (min-width:0) and (max-width: 800px) {
     .profile-content{
+        display: grid;
+        grid-template-columns: 1fr;
     
+    }
+    .profile-header{
     display: grid;
-    grid-template-areas: "profile-header"
-                          "content-left"
-                          "content-right";
-}
-.content-left{
-    
+    grid-template-columns: 1fr;
+}   
+    .content-left{
+    border: 0;
+    }
 
-    border-right: 0;
-}
 .header-left{
     float: none;
     display: flex;
     justify-content    : center;
-    /* justify-self: center; */
     align-content: center;
     margin: auto;
 
@@ -228,11 +231,17 @@ span{
     height: 320px;
     margin: auto;
 }
+.profile-header{
+    background: rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+}
 ul{
     padding-left: 0px;
 }
 li{
     padding: 7px;
+    width: auto;
 }
 p{
     margin: 0px;
@@ -240,7 +249,65 @@ p{
 a{
     font-size: 15px;
 }
+li a{
+        padding: 15px;
+        /* font-size: 20px; */
+    }
+    p.p{
+    font-size: 20px;
+    display: inline;
+}
 }
 
+@media (min-width:0) and (max-width: 420px) {
+    .header-right p{
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+a{
+    font-size: 10px;
+}
+li{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+li a{
+        padding: 0 10px;
+        font-size: 12px;
+    }
+    p.p{
+    font-size: 12px;
+    display: block;
+}
+}
+
+@media (min-width:801px) and (max-width: 1300px) {
+    
+    .profile-header{
+    background: rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+}   
+  .profile-header p{
+    margin: 0;
+}
+    li a{
+        padding: 25px;
+    }
+    li{
+    list-style: none;
+    float: left;
+    font-size: 20px;
+    color: black;
+    width: auto;
+
+}
+li a:hover{
+    border-radius: 3px;
+    padding: 3px 7px;
+    border: 2px solid rgb(89, 89, 232);
+    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
+}
+}
 
 </style>

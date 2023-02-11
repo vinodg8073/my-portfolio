@@ -26,7 +26,7 @@ h1{
 }
 .container{
     background-color:  rgb(245, 248, 248);
-    padding:    0px 25px;
+    padding:    10px 25px;
 }
 
 .content{

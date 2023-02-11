@@ -45,6 +45,9 @@
 </script>
 
 <style scoped>
+h1{
+    margin-top: 0;
+}
 .p70{
     width: 40%;
 }
@@ -80,7 +83,9 @@ background-color: aquamarine;
     bottom: 2px;
     padding-left:10px;
 }
-
+ul{
+    margin: 0;
+}
 li{
     list-style: none;
 }
@@ -91,5 +96,21 @@ li{
 .css{
     background-color: dodgerblue;
     width: 40%;
+}
+@media (min-width:0) and (max-width: 800px) {
+    ul{
+        padding-left: 15px;
+    }
+.bar{
+    margin: 3px 0;
+    width:20%;
+    margin-right: 30px;
+    float: left;
+    font-size: 13px;
+    font-weight: 10px;
+} 
+.html,.java{
+    width: 52%;
+}
 }
 </style>

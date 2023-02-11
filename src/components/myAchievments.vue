@@ -30,14 +30,9 @@
 
 <style scoped>
 .achievments{
-
-}
-.achievments{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); */
     background-color:  rgb(245, 248, 248);
     margin: 0px 0px;
-    padding: 10px 20px;
+    padding: 20px 20px 10px ;
  }
 h1{
     margin: 0%;
@@ -46,12 +41,7 @@ h1{
  .achievment{
     
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); */
     grid-template-columns: 2fr 1fr;
-    grid-area: 2 1;
-    /* grid-template: 2fr;
-    grid-auto-columns: 2fr; */
-    /* grid-area: 2fr; */
     padding: 10px;
     background: #151515;
     color: white;
@@ -61,5 +51,15 @@ h1{
 
     img{
         margin: auto;
+    }
+    @media (min-width:0) and (max-width: 620px) {
+    .achievment{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+    h3{
+        border-bottom: 2px solid whitesmoke;
+    }
     }
 </style>
