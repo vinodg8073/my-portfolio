@@ -69,9 +69,6 @@ export default {
   border: 2px solid yellow; 
   background-color:  rgb(245, 248, 248);;
 }
-.projects-list{
-  /* background-color:  rgb(245, 248, 248); */
-}
 </style>
 
 

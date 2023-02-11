@@ -84,6 +84,10 @@ h3,h2{
     float: left;
     text-align: center;
     height: 100%;
+    overflow: scroll;
+}
+.sideBar::-webkit-scrollbar{
+    display: none;
 }
 .profile-img{
     width: 100px;
@@ -155,6 +159,7 @@ ul{
 }
 
 .sideBar{
+    display: none;
     float: none;
     width: 100%;
 }
@@ -165,7 +170,6 @@ ul{
     margin-right: 30px;
     font-size: 30px;
     color: rgba(205, 28, 28, 0.636);
-    /* background: rgba(0, 0, 0, 0.8); */
 }
 
 

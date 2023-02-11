@@ -47,13 +47,12 @@
 .cert{
     background-color:  rgb(245, 248, 248);
     margin: 0px 0px;
-    padding: 20px;
+    padding: 20px 20px 10px;
+    
 }
 .certificate-card{
     display: grid;
-    grid-template: 2fr;
-    grid-auto-columns: 2fr;
-    /* grid-area: 2fr; */
+    grid-auto-columns: 1fr;
     padding: 10px;
     background: #151515;
     color: white;
@@ -79,4 +78,11 @@
     display: contents;
     align-items: center;
  }
+
+ @media (min-width:0) and (max-width: 620px) {
+    .certificates{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 </style>

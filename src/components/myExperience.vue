@@ -26,43 +26,32 @@
 </script>
 
 <style scoped>
+h1{
+    margin-top: 0;
+}
 div{
-    /* width: 76.5%; */
-    /* float: right; */
     background: rgb(245, 248, 248);
-    /* height: 700px; */
-    /* border: 10px solid red; */
 }
 
-h6{
-    /* font-size: large; */
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
-}
 .experience{
     padding: 20px;
 }
 .exp-company{
     padding-left: 20px;
 }
-/* .exp-content{
-    border-left: 4px solid black;
-    margin: 0 0 0 20px;
-} */
+
 li{
     margin-top: -10px;
 }
 li::marker{
-    font-size: 30px;
+    vertical-align: middle;
+    font-size: 40px;
 }
+
 ul{
     border-left: 4px solid black;
-    padding-left: 17px;
-    margin: 0 0 0 20px;
+    padding-left: 22px;
+    margin: 0 0 0 10px;
 }
 .exp-year{
     font-size: medium ;

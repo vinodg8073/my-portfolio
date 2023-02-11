@@ -22,7 +22,7 @@
 
     background: rgb(245, 248, 248);
     margin: 0px 0px;
-    padding: 20px;
+    padding: 20px 20px 10px;
 }
 .college{
     padding-left: 20px;
@@ -31,7 +31,6 @@
 
 h3,h4{
     margin: 0px;
-    
 }
 h4{
     color: dimgray;
@@ -41,7 +40,23 @@ h4{
     margin: 0px;
     display: grid;
     grid-column: 3;
-    grid-template-areas: "left mid right";
+    grid-template-areas: "left right mid";
 }
-
+h1{
+    margin-top: 0;
+}
+@media (min-width:0) and (max-width: 800px) {
+    .course{
+        display: grid;
+    grid-column: 1;
+    grid-template-areas: "left "
+                         "right "
+                         "mid";
+}
+    
+    
+h3,h4{
+    padding-bottom: 5px;
+}
+}
 </style>
