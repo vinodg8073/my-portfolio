@@ -8,10 +8,13 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(fas, far, fab)
 dom.watch();
+import mitt from 'mitt';
+const emitter = mitt();
+const app=createApp(App)
+app.component("font-awesome-icon", FontAwesomeIcon)
+app.use(router)
+app.config.globalProperties.emitter = emitter;
+app.mount('#app')
 
-createApp(App)
-    .component("font-awesome-icon", FontAwesomeIcon)
-    .use(router)
-    .mount('#app')
 
 // createApp(App).use(router).mount('#app')
