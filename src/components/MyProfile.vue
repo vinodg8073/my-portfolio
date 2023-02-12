@@ -6,13 +6,13 @@
                 <p><strong><i>VINOD G</i></strong></p>
                 <h1>Full Stack Software Developer</h1>
                 <ul>
-                    <li><a href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i> <p class="p">G-Mail</p></a></li>
+                    <li><a href="mailto:vinodgowda1998@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i> <p class="p">G-Mail</p></a></li>
                     <span> | </span>
                     <li><a href="tel:8073869494"><i class="icon fa-solid fa-phone"></i> <p class="p">Contact</p></a></li>
                     <span> | </span>
-                    <li><a href="https://www.linkedin.com/in/vinod-g-981259194/"><i class="fa-brands fa-linkedin"></i> <p class="p">LinkedIn</p></a></li>
+                    <li><a href="https://www.linkedin.com/in/vinod-g-981259194/" target="_blank"><i class="fa-brands fa-linkedin"></i> <p class="p">LinkedIn</p></a></li>
                     <span> | </span>
-                    <li><a href="https://github.com/vinodg8073"><i class="fa-brands fa-github"></i> <p class="p">GitHub</p></a></li>
+                    <li><a href="https://github.com/vinodg8073" target="_blank"><i class="fa-brands fa-github"></i> <p class="p">GitHub</p></a></li>
                     
                 </ul>
             </div>
@@ -23,7 +23,6 @@
                 <div style="margin-left: 30px">
                 <p class="bio-text">Hello,</p>
                 <p class="bio-text">I'm a Software Developer with experience in building both front end and back end web applocations using popular frameworks. Experience with source control systems Git. Continuously involved in learning process.</p>
-                <!-- <h3>I am a full stack developer living in Karnataka and I have experience in building functional and responsive websites using frameworks like Vue js and Stencil js.</h3> -->
                 <h2>Hobbies :</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea!</p>
             </div>

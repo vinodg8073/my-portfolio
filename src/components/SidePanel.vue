@@ -24,8 +24,8 @@
            
           <ul>
            <li><button @click="scrollToPage('profile')"><i class="icon fa-solid fa-user-circle"></i> Profile</button></li>
-           <li><button @click="scrollToPage('experience')"><i class="icon fa-solid fa-briefcase"></i> Experience</button></li> 
            <li><button @click="scrollToPage('education')"><i class="icon fa-solid fa-graduation-cap"></i> Education</button></li> 
+           <li><button @click="scrollToPage('experience')"><i class="icon fa-solid fa-briefcase"></i> Experience</button></li> 
            <li><button @click="scrollToPage('skills')"> <i class="icon fa-solid fa-code"></i> Skills</button></li> 
            <li><button @click="scrollToPage('achievements')"><i class="icon fa-solid fa-award"></i> Achievement</button></li> 
            <li><button @click="scrollToPage('certification')"><i class="icon fa-solid fa-certificate"></i> Certification</button></li> 
@@ -39,21 +39,14 @@
 
 <script>
 
-//    import mainPageVue from './mainPage.vue';
+import mitt from 'mitt'
+	window.mitt = window.mitt || new mitt()
     export default {
-//         methods: {
-//     goto(refName) {
-//       var element = this.$refs[refName];
-//       var top = element.offsetTop;
-//         console.log('working');
-//       window.scrollTo(0, top);
-//     }
-//   }
-methods: {
-         openModal() {
+    methods: {
+        scrollToPage(str){
+            window.mitt.emit('scroll',str)
          }
       }
-
     }
 </script>
 
@@ -93,28 +86,30 @@ h3,h2{
     width: 100px;
     padding-top: 4px;
 }
-.btn{
-    margin: 5px;
-    width: 130px;
-    height: 35px;
-    font-size: 25px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(to right,rgb(131, 35, 35),rgb(32, 69, 163));
-}
-a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 20px;
-}
 button{
     background: none;
     border: none;
     text-decoration: none;
     color: aliceblue;
     font-size: 20px;
+    padding: 10px;
     
 }
+.btn{
+    margin: 5px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right,rgb(131, 35, 35),rgb(32, 69, 163));
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 23px;
+  }
+
 .resume{
     padding: 4px;
     border-radius: 20px;
@@ -130,7 +125,7 @@ button{
 li{
     list-style: none;
     font-size: 20px;
-    padding: 10px;
+    
 }
 li:hover{
     transform: translateX(4px);
@@ -140,6 +135,7 @@ ul{
     padding: 0;
     margin-top: -5px;
 }
+
 
 @media (min-width:0) and (max-width: 979px) {
     .profile{
