@@ -1,0 +1,47 @@
+{
+    "sidePanel": {
+        "top":{
+            "imgUrl":"/assets/profile.jpg",
+            "name":"Vinod G",
+            "heading":"Full Stack Software Developer",
+            "heading2":"Resume",
+            "btns":["View","Download"]
+        },
+        "bottom":{
+        "title": "View",
+        "menus": [
+            {
+                "key": "Profile",
+                "class": "fa-user-circle"
+            },
+            {
+                "key": "Education",
+                "class": "fa-graduation-cap"
+            },
+            {
+                "key": "Experience",
+                "class": "fa-briefcase"
+            },
+            {
+                "key": "Skills",
+                "class": "fa-code"
+            },
+            {
+                "key": "Achievement",
+                "class": "fa-award"
+            },
+            {
+                "key": "Certification",
+                "class": "fa-certificate"
+            },
+            {
+                "key": "Projects",
+                "class": "fa-diagram-project"
+            },
+            {
+                "key": "Activities",
+                "class": "fa-cubes"
+            }
+        ]}
+    }
+}

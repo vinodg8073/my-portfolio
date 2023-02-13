@@ -1,12 +1,12 @@
 <template>
-      <div ref="profile"><my-profile-vue></my-profile-vue></div>
-      <div ref="education"><my-education></my-education></div>
-      <div ref="experience"><my-experience></my-experience></div>
-      <div ref="skills"><my-skills></my-skills></div>
-      <div ref="achievements"><myAchievments></myAchievments></div>
-      <div ref="certification"><my-certificates-vue></my-certificates-vue></div>
-      <div ref="projects"><myProjects></myProjects></div>
-      <div ref="activities"><myActivities></myActivities></div>
+      <div ref="Profile"><my-profile-vue></my-profile-vue></div>
+      <div ref="Education"><my-education></my-education></div>
+      <div ref="Experience"><my-experience></my-experience></div>
+      <div ref="Skills"><my-skills></my-skills></div>
+      <div ref="Achievement"><myAchievments></myAchievments></div>
+      <div ref="Certification"><my-certificates-vue></my-certificates-vue></div>
+      <div ref="Projects"><myProjects></myProjects></div>
+      <div ref="Activities"><myActivities></myActivities></div>
 </template>
 
 <script>
