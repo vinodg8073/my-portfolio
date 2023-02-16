@@ -1,150 +1,185 @@
 <template>
     <div class="parent" ref="ie">
-             <div class="profile-header">
-                <div class="header-left"><img class="profile-img" src="@/assets/profile.jpg" alt=""/></div>
-                <div class="header-right">
-                <p><strong><i>VINOD G</i></strong></p>
-                <h1>Full Stack Software Developer</h1>
+        <div class="profile-header">
+            <div class="header-left">
+                <img class="profile-img" src="@/assets/profile.jpg" alt="" />
+            </div>
+            <div class="header-right">
+                <p>
+                    <strong><i>{{ profileDatas.pname }}</i></strong>
+                </p>
+                <h1>{{ profileDatas.heading }}</h1>
                 <ul>
-                    <li><a href="mailto:vinodgowda1998@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i> <p class="p">G-Mail</p></a></li>
-                    <span> | </span>
-                    <li><a href="tel:8073869494"><i class="icon fa-solid fa-phone"></i> <p class="p">Contact</p></a></li>
-                    <span> | </span>
-                    <li><a href="https://www.linkedin.com/in/vinod-g-981259194/" target="_blank"><i class="fa-brands fa-linkedin"></i> <p class="p">LinkedIn</p></a></li>
-                    <span> | </span>
-                    <li><a href="https://github.com/vinodg8073" target="_blank"><i class="fa-brands fa-github"></i> <p class="p">GitHub</p></a></li>
-                    
+                    <li v-for="btn of profileDatas.btnLinks" :key="btn">
+                        <a href="`${btn.href}`" target="`${btn.target}`"><i class="`${btn.icon}`"></i>
+                            <p class="p">{{ btn.text }}</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            </div>
-            <div class="profile-content">
-                <div class="content-left" >
-                <h2><i class="fa-solid fa-user" style="text-decoration: none;"> </i> <span class="ul">Bio :</span></h2>
+        </div>
+        <div class="profile-content">
+            <div class="content-left">
+                <h2>
+                    <i class="fa-solid fa-user" style="text-decoration: none"> </i>
+                    <span class="ul">Bio :</span>
+                </h2>
                 <div style="margin-left: 30px">
-                <p class="bio-text">Hello,</p>
-                <p class="bio-text">I'm a Software Developer with experience in building both front end and back end web applocations using popular frameworks. Experience with source control systems Git. Continuously involved in learning process.</p>
-                <h2>Hobbies :</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea!</p>
+                    <p class="bio-text">Hello,</p>
+                    <p class="bio-text">
+                        I'm a Software Developer with experience in building both front end
+                        and back end web applocations using popular frameworks. Experience
+                        with source control systems Git. Continuously involved in learning
+                        process.
+                    </p>
+                    <h2>Hobbies :</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea!
+                    </p>
+                </div>
             </div>
+            <div class="content-right">
+                <h2>
+                    <i class="fa-solid fa-circle-info" style="text-decoration: none"> </i>
+                    <span class="ul">Information :</span>
+                </h2>
+                <div style="margin-left: 30px">
+                    <table>
+                        <tr>
+                            <th>Gender</th>
+                            <td>:</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <th>DOB</th>
+                            <td>:</td>
+                            <td>17/08/1998</td>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <td>:</td>
+                            <td><i> Bheemasandra, SSMC Post, Tumkur, Karnataka 572107</i></td>
+                        </tr>
+                    </table>
+                    <h3 class="ul">You can get in touch with me here :</h3>
+                    <a class="bio" href="tel:8073869494"><i class="fa-solid fa-phone"></i> +91-8073869494</a>
+                    <a class="bio" href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i>
+                        vinodgowda1998@gmail.com</a>
+                </div>
             </div>
-                <div class="content-right">
-                
-                    <h2 ><i class="fa-solid fa-circle-info" style="text-decoration: none;"> </i> <span class="ul">Information :</span> </h2> 
-                <div style="margin-left: 30px;">
-                <table>
-                    <tr>
-                        <th>Gender</th>
-                        <td> : </td>
-                        <td>Male</td>
-                    </tr>
-                    <tr>
-                        <th>DOB</th>
-                        <td> : </td>
-                        <td>17/08/1998</td>
-                    </tr>
-                    <tr>
-                        <th>Address</th>
-                        <td> : </td>
-                        <td><i> Bheemasandra, SSMC Post, Tumkur, Karnataka 572107</i></td>
-                    </tr>
-                </table>
-                <h3 class="ul">You can get in touch with me here :</h3>
-                <a class="bio" href="tel:8073869494"><i class="fa-solid fa-phone"></i> +91-8073869494</a> 
-                <a class="bio" href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i> vinodgowda1998@gmail.com</a>
-            </div>    
-            </div>
-            </div>
+        </div>
     </div>
 </template>
 
 <script>
-    export default {
-        methods: {
-    goto(refName) {
-      var element = this.$refs[refName];
-      var top = element.offsetTop;
-        console.log('working');
-      window.scrollTo(0, top);
-    }
-  }
-
-    }
+export default {
+    data() {
+        return {
+            profileDatas: {},
+        };
+    },
+    
+    methods: {
+        fetchProfileData() {
+            fetch("profile.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.profileDatas = data.profile;
+                    console.log(this.profileDatas)
+                });
+        },
+    },
+    created() {
+        this.fetchProfileData();
+    },
+};
 </script>
 
 <style scoped>
+li:nth-child(-n+3) {
+    border-right: 2px solid black;
+}
 
-
-.bio-text{
+.bio-text {
     font-size: large;
 }
-.ul{
+
+.ul {
     text-decoration: underline;
 }
-.i{
+
+.i {
     height: 400px;
     border: 5px solid red;
 }
-th{
-   text-align: left; 
-   padding: 5px;
 
+th {
+    text-align: left;
+    padding: 5px;
 }
 
-table{
+table {
     font-size: 20px;
 }
 
-.parent{
+.parent {
     /* width: 76.5%; */
     /* float: right; */
     background: rgb(245, 248, 248);
 }
-.profile-header{
+
+.profile-header {
     background: rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 25% 75%;
 }
-.profile-img{
+
+.profile-img {
     margin: 20px;
     margin-top: 10px;
     width: 300px;
     height: 320px;
 }
-.header-left{
+
+.header-left {
     /* float: left; */
     margin: auto;
 }
-.header-right{
+
+.header-right {
     text-align: center;
     padding-top: 20px;
 }
-.header-right p{
+
+.header-right p {
     font-size: 100px;
     margin-bottom: 0px;
 }
-ul{
+
+ul {
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
+
 }
-li{
+
+li {
     list-style: none;
     float: left;
     font-size: 20px;
     padding: 10px;
     color: black;
     width: 200px;
-
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
     padding: 8px 25px;
 }
 
-li a:hover{
-    
-    background: rgba(0, 0, 0,0.8);
+li a:hover {
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     color: aliceblue;
     padding: 8px 25px;
@@ -153,17 +188,21 @@ li a:hover{
     box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
     /* box-shadow: 0 8px 32px 0 rgba(221, 24, 24, 0.9); */
 }
-a:hover{
+
+a:hover {
     border-radius: 10px;
     color: aliceblue;
 }
-.icon{
+
+.icon {
     width: 20px;
 }
-span{
+
+span {
     font-size: 30px;
 }
-.bio{
+
+.bio {
     text-align: center;
     display: inline-block;
     border: black 2px solid;
@@ -172,141 +211,156 @@ span{
     border-radius: 10px;
     min-width: 40%;
     margin: 5px;
-    
 }
-.bio:hover{
+
+.bio:hover {
     border: rgb(11, 4, 111) 2px solid;
     padding: 12px;
     background: rgba(4, 17, 59, 0.6);
     margin: auto;
 }
-.profile-content{
+
+.profile-content {
     width: 100%;
     padding: 15px;
     min-height: 340px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.content-left{
+
+.content-left {
     border-right: 5px solid black;
     margin-right: 10px;
     padding-right: 10px;
 }
 
-.content-right{
+.content-right {
     padding-right: 15px;
 }
 
-p.p{
+p.p {
     font-size: 20px;
     display: inline;
 }
-@media (min-width:0) and (max-width: 800px) {
-    .profile-content{
+
+@media (min-width: 0) and (max-width: 800px) {
+    .profile-content {
         display: grid;
         grid-template-columns: 1fr;
-    
-    }
-    .profile-header{
-    display: grid;
-    grid-template-columns: 1fr;
-}   
-    .content-left{
-    border: 0;
     }
 
-.header-left{
-    float: none;
-    display: flex;
-    justify-content    : center;
-    align-content: center;
-    margin: auto;
+    .profile-header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
-}
-.profile-img{
-    
-    justify-self: center ;
-    width: 300px;
-    height: 320px;
-    margin: auto;
-}
-.profile-header{
-    background: rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: 1fr;
-}
-ul{
-    padding-left: 0px;
-}
-li{
-    padding: 7px;
-    width: auto;
-}
-p{
-    margin: 0px;
-}
-a{
-    font-size: 15px;
-}
-li a{
+    .content-left {
+        border: 0;
+    }
+
+    .header-left {
+        float: none;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+
+    .profile-img {
+        justify-self: center;
+        width: 300px;
+        height: 320px;
+        margin: auto;
+    }
+
+    .profile-header {
+        background: rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        padding-left: 0px;
+    }
+
+    li {
+        padding: 7px;
+        width: auto;
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    li a {
         padding: 15px;
         /* font-size: 20px; */
     }
-    p.p{
-    font-size: 20px;
-    display: inline;
-}
+
+    p.p {
+        font-size: 20px;
+        display: inline;
+    }
 }
 
-@media (min-width:0) and (max-width: 420px) {
-    .header-right p{
-    font-size: 50px;
-    margin-bottom: 0px;
-}
-a{
-    font-size: 10px;
-}
-li{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-li a{
+@media (min-width: 0) and (max-width: 420px) {
+    .header-right p {
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    li a {
         padding: 0 10px;
         font-size: 12px;
     }
-    p.p{
-    font-size: 12px;
-    display: block;
-}
+
+    p.p {
+        font-size: 12px;
+        display: block;
+    }
 }
 
-@media (min-width:801px) and (max-width: 1300px) {
-    
-    .profile-header{
-    background: rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: 1fr;
-}   
-  .profile-header p{
-    margin: 0;
-}
-    li a{
+@media (min-width: 801px) and (max-width: 1300px) {
+    .profile-header {
+        background: rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profile-header p {
+        margin: 0;
+    }
+
+    li a {
         padding: 25px;
     }
-    li{
-    list-style: none;
-    float: left;
-    font-size: 20px;
-    color: black;
-    width: auto;
 
-}
-li a:hover{
-    border-radius: 3px;
-    padding: 3px 7px;
-    border: 2px solid rgb(89, 89, 232);
-    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
-}
-}
+    li {
+        list-style: none;
+        float: left;
+        font-size: 20px;
+        color: black;
+        width: auto;
+    }
 
+    li a:hover {
+        border-radius: 3px;
+        padding: 3px 7px;
+        border: 2px solid rgb(89, 89, 232);
+        box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
+    }
+}
 </style>
