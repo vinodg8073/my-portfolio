@@ -1,0 +1,52 @@
+{
+    "skills":{
+        "heading":"Skills :",
+        "languages":[
+            {
+                "language":"HTML",
+                "percentage":"85",
+                "color":"red"
+            },
+            {
+                "language":"CSS",
+                "percentage":"70",
+                "color":"dodgerblue"
+            },
+            {
+                "language":"JAVASCRIPT",
+                "percentage":"75",
+                "color":"yellow"
+            },
+            {
+                "language":"VUE JS",
+                "percentage":"75",
+                "color":"green"
+            },
+            {
+                "language":"STENCIL JS",
+                "percentage":"65",
+                "color":"darkslategray"
+            },
+            {
+                "language":"JAVA",
+                "percentage":"85",
+                "color":"red"
+            },
+            {
+                "language":"SPRING",
+                "percentage":"70",
+                "color":"green"
+            },
+            {
+                "language":"GIT",
+                "percentage":"80",
+                "color":"brown"
+            },
+            {
+                "language":"BOOTSTRAP",
+                "percentage":"75",
+                "color":"purple"
+            }
+        ]
+    }
+}

@@ -1,10 +1,10 @@
 <template>
     <div class="education">
-        <i><h1>Education : </h1></i>
-        <div class="college">
-            <strong><h2>Sri Siddhartha Institute of Technology </h2></strong>
+        <i><h1>{{ education.heading }}</h1></i>
+        <div class="college" v-for="college in education.colleges" :key="college">
+            <strong><h2>{{ college.collegeName }}</h2></strong>
             <div class="course">
-                <h3 class="left">Bachelor of Engineering : Electrical and Electronics Engineering</h3> <h4 class="mid">CGPA : 7.81</h4> <h4 class="right"><i>Aug 2017 - Aug 2021</i></h4>
+                <h3 class="left">{{ college.course }}</h3> <h4 class="mid">{{ college.result }}</h4> <h4 class="right"><i>{{ college.year }}</i></h4>
             </div>
         </div>
         
@@ -13,7 +13,23 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                education:{}
+            }
+        },
+        methods: {
+        fetchEducationData() {
+            fetch("education.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.education = data.education;
+                });
+        },
+    },
+    created() {
+        this.fetchEducationData();
+    },
     }
 </script>
 

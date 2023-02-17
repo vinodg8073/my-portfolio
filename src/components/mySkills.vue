@@ -1,52 +1,50 @@
 <template>
     <div class="skills">
-        <h1><strong><i>Skills :</i></strong></h1>
+        <h1><strong><i>{{ skills.heading }}</i></strong></h1>
         <ul>
-            <li>
-                <h3 class="bar">HTML</h3><div class="html right"></div>
-                <span class="percentage">85%</span>
-            </li><br>
-            <li>
-                <h3 class="bar">CSS</h3><div class="p70 right" style="background-color: dodgerblue;"></div>
-                <span class="percentage">70%</span>
-            </li><br>
-            <li>
-                <h3 class="bar">JAVASCRIPT</h3><div class="js right p75" style="background-color: yellow;"></div>
-                <span class="percentage">75%</span>
-            </li><br>
-            <li>
-                <h3 class="bar">VUE JS</h3><div class="vue right p75" style="background-color: green;"></div>
-                <span class="percentage">75%</span>
-            </li><br>
-            <li>
-                <h3 class="bar sjs">STENCIL JS</h3><div class="right p65" style="background-color: rgba(0, 0, 0, 0.7);"></div>
-                <span class="percentage">65%</span>
-            </li><br>
-            <li>
-                <h3 class="bar">JAVA</h3><div class="java right"></div>
-                <span class="percentage">85%</span>
-            </li><br>
-            <li>
-                <h3 class="bar spring">SPRING</h3><div class="p70 right" style="background-color: lightgreen;"></div>
-                <span class="percentage">70%</span>
-            </li><br>
-            <li>
-                <h3 class="bar bcss">BOOTSTRAP</h3><div class="p70 right" style="background-color: purple;"></div>
-                <span class="percentage">70%</span>
+            <span v-for="skill in skills.languages" :key="skill" >
+            <li >
+                <h3 class="bar">{{ skill.language }}</h3><div :class="`p${skill.percentage} right`" :style="`background-color: ${skill.color}`"></div>
+                <span class="percentage">{{skill.percentage}}%</span>
             </li>
+            <br>
+        </span>
         </ul>
     </div>
 </template>
 
 <script>
     export default {
-       name:'my-skills' 
+       name:'my-skills' ,
+       data(){
+            return{
+                skills:{}
+            }
+        },
+        methods: {
+        fetchSkillsData() {
+            fetch("skills.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.skills = data.skills;
+                });
+        },
+    },
+    created() {
+        this.fetchSkillsData();
+    },
     }
 </script>
 
 <style scoped>
 h1{
     margin-top: 0;
+}
+.p85{
+    width: 55%;
+}
+.p80{
+    width: 50%;
 }
 .p70{
     width: 40%;
@@ -62,7 +60,7 @@ h1{
     float: left;
     height: 10px;
     border-radius: 10px;
-    margin: 7px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 .skill-bar{
 background-color: aquamarine;
@@ -75,10 +73,7 @@ background-color: aquamarine;
     margin: 0px;
     float: left;
 }
-.html,.java{
-    width: 55%;
-    background-color: red;
-}
+
 .percentage{
     bottom: 2px;
     padding-left:10px;
@@ -93,10 +88,7 @@ li{
     background: rgb(245, 248, 248);
     padding: 20px;
 }
-.css{
-    background-color: dodgerblue;
-    width: 40%;
-}
+
 @media (min-width:0) and (max-width: 800px) {
     ul{
         padding-left: 15px;

@@ -1,0 +1,14 @@
+{
+    "education":{
+        "heading":"Education :",
+        "colleges":[
+            {
+                "collegeName":"Sri Siddhartha Institute of Technology ",
+                "course": "Bachelor of Engineering : Electrical and Electronics Engineering",
+                "year":"Aug 2017 - Aug 2021",
+                "result":"CGPA : 7.81"
+            }
+           
+        ]
+    }
+}

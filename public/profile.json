@@ -30,20 +30,14 @@
             }
         ],
         "bio":{
-            "heading":{
-                "hh":"Bio :",
-                "icon":"fa-solid fa-user"
-            },
+            "heading":"Bio :",
             "greet":"Hello,",
             "description":"I'm a Software Developer with experience in building both front end and back end web applications using popular frameworks. Experience with source control systems Git. Continuously involved in learning process.",
             "text2":"Hobbies :",
             "description2":"Sports, Flying FPV Drone, Trekking."
         },
         "info":{
-            "heading":{
-                "text":"Information :",
-                "icon":"fa-solid fa-circle-info"
-            },
+            "heading":"Information :",
             "table":[
                 {   
                     "key":"Gender",
