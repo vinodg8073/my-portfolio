@@ -11,7 +11,8 @@
                 <h1>{{ profileDatas.heading }}</h1>
                 <ul>
                     <li v-for="btn of profileDatas.btnLinks" :key="btn">
-                        <a href="`${btn.href}`" target="`${btn.target}`"><i class="`${btn.icon}`"></i>
+                        <a href="`${btn.href}`" target="`${btn.target}`"><i :class="`${btn.icon}`"></i>
+                            &nbsp;
                             <p class="p">{{ btn.text }}</p>
                         </a>
                     </li>
@@ -22,49 +23,35 @@
             <div class="content-left">
                 <h2>
                     <i class="fa-solid fa-user" style="text-decoration: none"> </i>
-                    <span class="ul">Bio :</span>
+                    <span>&nbsp;</span>
+                    <span class="ul">{{ bio.heading }}</span>
                 </h2>
                 <div style="margin-left: 30px">
-                    <p class="bio-text">Hello,</p>
-                    <p class="bio-text">
-                        I'm a Software Developer with experience in building both front end
-                        and back end web applocations using popular frameworks. Experience
-                        with source control systems Git. Continuously involved in learning
-                        process.
+                    <p class="bio-text">{{ bio.greet }}</p>
+                    <p class="bio-text">{{ bio.description }}
                     </p>
-                    <h2>Hobbies :</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea!
+                    <h2>{{ bio.text2 }}</h2>
+                    <p>{{ bio.description2 }}
                     </p>
                 </div>
             </div>
             <div class="content-right">
                 <h2>
                     <i class="fa-solid fa-circle-info" style="text-decoration: none"> </i>
-                    <span class="ul">Information :</span>
+                    <span>&nbsp;</span>
+                    <span class="ul">{{ infos.heading }}</span>
                 </h2>
                 <div style="margin-left: 30px">
                     <table>
-                        <tr>
-                            <th>Gender</th>
+                        <tr v-for=" record in infos.table" :key="record">
+                            <th>{{ record.key }}</th>
                             <td>:</td>
-                            <td>Male</td>
-                        </tr>
-                        <tr>
-                            <th>DOB</th>
-                            <td>:</td>
-                            <td>17/08/1998</td>
-                        </tr>
-                        <tr>
-                            <th>Address</th>
-                            <td>:</td>
-                            <td><i> Bheemasandra, SSMC Post, Tumkur, Karnataka 572107</i></td>
+                            <td>{{ record.value }}</td>
                         </tr>
                     </table>
-                    <h3 class="ul">You can get in touch with me here :</h3>
-                    <a class="bio" href="tel:8073869494"><i class="fa-solid fa-phone"></i> +91-8073869494</a>
-                    <a class="bio" href="mailto:vinodgowda1998@gmail.com"><i class="fa-solid fa-square-envelope"></i>
-                        vinodgowda1998@gmail.com</a>
+                    <h3 class="ul">{{ infos.text1 }}</h3>
+                    <a v-for="btn in infos.btns" :key="btn" class="bio" :href="`${btn.href}`"><i
+                            :class="`${btn.icon}`"></i> &nbsp;{{ btn.text }}</a>
                 </div>
             </div>
         </div>
@@ -76,15 +63,19 @@ export default {
     data() {
         return {
             profileDatas: {},
+            bio: {},
+            infos: {}
         };
     },
-    
+
     methods: {
         fetchProfileData() {
             fetch("profile.json")
                 .then((response) => response.json())
                 .then((data) => {
                     this.profileDatas = data.profile;
+                    this.bio = this.profileDatas.bio;
+                    this.infos = this.profileDatas.info;
                     console.log(this.profileDatas)
                 });
         },
