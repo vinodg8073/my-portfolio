@@ -1,45 +1,56 @@
 <template>
-    <div class="achievments">
-        <i class="heading"><h1>Achievements : </h1></i>
-        <div class="achievments-list">
-            <div class="achievment">
-                <img  class="img1" src="@/assets/logo.png" alt="">
+    <div class="achievements">
+        <i class="heading">
+            <h1>{{ achievements.heading }}</h1>
+        </i>
+        <div class="achievements-list">
+            <div class="achievement" v-for="achievement in achievements.allAchievements" :key="achievement">
+                <img class="img1" :src="`${achievement.imgUrl}`" alt="">
                 <div class="details">
-                <h3>Java Full Stack Development Course Certificate Nov(2021) - May(2022)</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quam rem doloremque dolorem nesciunt ipsum repudiandae mollitia, deserunt incidunt provident id. Nulla eaque quae veritatis!</p>
+                    <h3>{{ achievement.heading2 }}</h3>
+                    <p>{{ achievement.details }}</p>
                 </div>
             </div>
-            <div class="achievment">
-                <img  class="img2" src="@/assets/logo.png" alt="">
-                <div class="details">
-                <h3>Java Full Stack Development Course Certificate Nov(2021) - May(2022)</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quam rem doloremque dolorem nesciunt ipsum repudiandae mollitia, deserunt incidunt provident id. Nulla eaque quae veritatis!</p>
-                </div>
         </div>
-    
-</div>
-
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+    data() {
+        return {
+            achievements: {}
+        }
+    },
+    methods: {
+        fetchEducationData() {
+            fetch("achievements.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.achievements = data.achievements;
+                });
+        },
+    },
+    created() {
+        this.fetchEducationData();
+    },
+}
 </script>
 
 <style scoped>
-.achievments{
-    background-color:  rgb(245, 248, 248);
+.achievements {
+    background-color: rgb(245, 248, 248);
     margin: 0px 0px;
-    padding: 20px 20px 10px ;
- }
-h1{
+    padding: 20px 20px 10px;
+}
+
+h1 {
     margin: 0%;
     padding: 0 0 10px 0;
 }
- .achievment{
-    
+
+.achievement {
+
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 10px;
@@ -47,19 +58,22 @@ h1{
     color: white;
     margin: 10px 5px 10px 5px;
     border-radius: 10px;
-    }
+    align-items: center;
+}
 
-    img{
-        margin: auto;
-    }
-    @media (min-width:0) and (max-width: 620px) {
-    .achievment{
+img {
+    margin: auto;
+}
+
+@media (min-width:0) and (max-width: 620px) {
+    .achievement {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
     }
-    h3{
+
+    h3 {
         border-bottom: 2px solid whitesmoke;
     }
-    }
+}
 </style>
