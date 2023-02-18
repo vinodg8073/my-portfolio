@@ -1,0 +1,25 @@
+{
+    "projects":{
+        "heading":"Projects :",
+        "allProjects":[
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            }
+        ]
+    },
+    "activities":{
+        "heading":"Activities :",
+        "activitiesList":[
+            {
+                "activity":"Lead a technical team called <strong><a href='https://ssit.edu.in/varsity-circle/' style='text-decoration: none;'>Varsity Circle</a></strong>. Currently I'm one of the advisory board member"
+            }
+        ]
+    }
+}

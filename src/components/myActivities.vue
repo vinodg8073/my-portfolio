@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <i class="heading"><h1>Activities : </h1></i>
+        <i class="heading"><h1>{{ activities.heading }}</h1></i>
         <div class="content">
-            <ul>
-                <li>Lead a technical team called <strong><a href="https://ssit.edu.in/varsity-circle/">Varsity Circle</a></strong>. Currently I'm one of the advisory board member</li>
+            <ul >
+                <li v-for="activity in activities.activitiesList" :key="activity" v-html="activity.activity"></li>
             </ul>
         </div>
     </div>
@@ -11,7 +11,23 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                activities:{}
+            }
+        },
+        methods: {
+        fetchSkillsData() {
+            fetch("projects.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.activities = data.activities;
+                });
+        },
+    },
+    created() {
+        this.fetchSkillsData();
+    },
     }
 </script>
 
@@ -33,9 +49,7 @@ h1{
     margin-left: 20px;
     padding: 0 0 10px 0;
 }
-a{
-    text-decoration: none;
-}
+
 ul{
     list-style-type: square;
 }

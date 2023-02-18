@@ -1,23 +1,15 @@
 <template>
     <div class="container">
-        <i class="heading" stye><h1>Projects : </h1></i>
+        <i class="heading" stye><h1>{{projects.heading}}</h1></i>
         <div class="projects-list">
-            <div class="project">
-                <img  class="pimg" src="@/assets/logo.png" alt="">
+            <div class="project" v-for="project in projects.allProjects" :key="project">
+                <img  class="pimg" :src="`${project.imgUrl}`">
                 <div class="content">
-                <i>something here  :</i>
-                <h1>FPV Drone</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, modi.</p>
+                <h1>{{ project.heading2 }}</h1>
+                <p>{{project.details}}</p>
             </div>
             </div>
-            <div class="project">
-                <img class="pimg"  src="@/assets/logo.png" alt="">
-                <div class="content">
-                <i>something here  :</i>
-                <h1>FPV Drone</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, modi.</p>
-            </div>
-            </div>
+           
 
         </div>
     </div>
@@ -25,7 +17,23 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                projects:{}
+            }
+        },
+        methods: {
+        fetchSkillsData() {
+            fetch("projects.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.projects = data.projects;
+                });
+        },
+    },
+    created() {
+        this.fetchSkillsData();
+    },
     }
 </script>
 
