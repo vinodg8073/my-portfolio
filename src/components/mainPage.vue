@@ -1,13 +1,17 @@
 <template>
       <div ref="Profile"><my-profile-vue></my-profile-vue></div>
       <div ref="Education"><my-education></my-education></div>
-      <div ref="Experience"><my-experience></my-experience></div>
+      <div ref="Experience">
+        <keep-alive>
+        <my-experience :experienceData="experiences"></my-experience></keep-alive>
+      </div>
       <div ref="Skills"><my-skills></my-skills></div>
       <div ref="Achievement"><myAchievments></myAchievments></div>
       <div ref="Certification"><my-certificates-vue></my-certificates-vue></div>
       <div ref="Projects"><myProjects></myProjects></div>
       <div ref="Activities"><myActivities></myActivities></div>
 </template>
+
 
 <script>
 
@@ -33,20 +37,36 @@ export default {
     myProjects,
     myActivities
   },
-  
+  data(){
+    return{
+      experiences:{"so":"sjb"}
+    }
+  },
   methods: {
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
       window.scrollTo(0, top);
-    }
+    },
+    fetchEducationData() {
+      
+            fetch("allData.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    this.experiences = data.experience;
+                    console.log('ww',this.experiences)
+                });
+        },
   },
   created() {
     window.mitt.on('scroll',(value)=>{
       this.goto(value)
     })
+    this.fetchEducationData();
   },
-
+  // mounted(){
+  //   this.fetchEducationData();
+  // }
 }
 </script>
 

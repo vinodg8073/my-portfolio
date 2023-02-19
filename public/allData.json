@@ -133,16 +133,30 @@
         "heading":"Experience :",
         "details":[
             {
-                "college":"Amiti Software Technologies Private Limited",
+                "company":"Amiti Software Technologies Private Limited",
                 "year":"May 2022 - Present",
                 "designations":[
                     {
                         "designation":"Software Developer",
-                        "description":""
+                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     },
                     {
                         "designation":"Trainee Software Developer",
-                        "description":""
+                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                    }
+                ]
+            },
+            {
+                "company":"Amiti Software Technologies Private Limited",
+                "year":"May 2022 - Present",
+                "designations":[
+                    {
+                        "designation":"Software Developer",
+                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                    },
+                    {
+                        "designation":"Trainee Software Developer",
+                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     }
                 ]
             }
