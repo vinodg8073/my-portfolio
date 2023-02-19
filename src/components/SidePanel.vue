@@ -54,7 +54,6 @@ export default {
           this.menus = data.sidePanel.bottom?.menus;
           this.top = data.sidePanel.top;
           this.bottom = data.sidePanel.bottom;
-          console.log(this.allData, this.menus);
         });
     },
   },
