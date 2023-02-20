@@ -60,6 +60,7 @@
 
 <script>
 export default {
+    props:['profile'],
     data() {
         return {
             profileDatas: {},
@@ -67,22 +68,18 @@ export default {
             infos: {}
         };
     },
-
+    
     methods: {
-        fetchProfileData() {
-            fetch("profile.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.profileDatas = data.profile;
-                    this.bio = this.profileDatas.bio;
-                    this.infos = this.profileDatas.info;
-                    console.log(this.profileDatas)
-                });
-        },
+        setDatas() {
+            this.profileDatas=this.profile;
+        this.bio=this.profile.bio;
+        this.infos=this.profile.info
+         },
     },
-    created() {
-        this.fetchProfileData();
-    },
+    
+    updated(){
+        this.setDatas();
+    }
 };
 </script>
 

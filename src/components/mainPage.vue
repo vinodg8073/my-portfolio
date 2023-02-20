@@ -1,5 +1,5 @@
 <template>
-      <div ref="Profile"><my-profile-vue></my-profile-vue></div>
+      <div ref="Profile"><my-profile-vue :profile="profile"></my-profile-vue></div>
       <div ref="Education"><my-education></my-education></div>
       <div ref="Experience">
         <keep-alive>
@@ -39,7 +39,8 @@ export default {
   },
   data(){
     return{
-      experiences:{"so":"sjb"}
+      experiences:{},
+      profile:{}
     }
   },
   methods: {
@@ -48,13 +49,13 @@ export default {
       var top = element.offsetTop;
       window.scrollTo(0, top);
     },
-    fetchEducationData() {
+    fetchAllData() {
       
             fetch("allData.json")
                 .then((response) => response.json())
                 .then((data) => {
                     this.experiences = data.experience;
-                    console.log('ww',this.experiences)
+                    this.profile=data.profile
                 });
         },
   },
@@ -62,11 +63,9 @@ export default {
     window.mitt.on('scroll',(value)=>{
       this.goto(value)
     })
-    this.fetchEducationData();
+    this.fetchAllData();
   },
-  // mounted(){
-  //   this.fetchEducationData();
-  // }
+ 
 }
 </script>
 
