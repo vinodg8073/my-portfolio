@@ -1,9 +1,8 @@
 <template>
       <div ref="Profile"><my-profile-vue :profile="profile"></my-profile-vue></div>
-      <div ref="Education"><my-education></my-education></div>
+      <div ref="Education" ><my-education :educationData="education"></my-education></div>
       <div ref="Experience">
-        <keep-alive>
-        <my-experience :experienceData="experiences"></my-experience></keep-alive>
+        <my-experience :experienceData="experiences"></my-experience>
       </div>
       <div ref="Skills"><my-skills></my-skills></div>
       <div ref="Achievement"><myAchievments></myAchievments></div>
@@ -40,7 +39,8 @@ export default {
   data(){
     return{
       experiences:{},
-      profile:{}
+      profile:{},
+      education:{}
     }
   },
   methods: {
@@ -55,7 +55,8 @@ export default {
                 .then((response) => response.json())
                 .then((data) => {
                     this.experiences = data.experience;
-                    this.profile=data.profile
+                    this.profile=data.profile;
+                    this.education=data.education;
                 });
         },
   },
