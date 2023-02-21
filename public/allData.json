@@ -1,158 +1,160 @@
 {
     "sidePanel": {
-        "top":{
-            "imgUrl":"/assets/profile.jpg",
-            "name":"Vinod G",
-            "heading":"Full Stack Software Developer",
-            "heading2":"Resume",
-            "btns":["View","Download"]
+        "top": {
+            "imgUrl": "/assets/profile.jpg",
+            "name": "Vinod G",
+            "heading": "Full Stack Software Developer",
+            "heading2": "Resume",
+            "btns": [
+                "View",
+                "Download"
+            ]
         },
-        "bottom":{
-        "title": "View",
-        "menus": [
-            {
-                "key": "Profile",
-                "class": "fa-user-circle"
-            },
-            {
-                "key": "Education",
-                "class": "fa-graduation-cap"
-            },
-            {
-                "key": "Experience",
-                "class": "fa-briefcase"
-            },
-            {
-                "key": "Skills",
-                "class": "fa-code"
-            },
-            {
-                "key": "Achievement",
-                "class": "fa-award"
-            },
-            {
-                "key": "Certification",
-                "class": "fa-certificate"
-            },
-            {
-                "key": "Projects",
-                "class": "fa-diagram-project"
-            },
-            {
-                "key": "Activities",
-                "class": "fa-cubes"
-            }
-        ]}
+        "bottom": {
+            "title": "View",
+            "menus": [
+                {
+                    "key": "Profile",
+                    "class": "fa-user-circle"
+                },
+                {
+                    "key": "Education",
+                    "class": "fa-graduation-cap"
+                },
+                {
+                    "key": "Experience",
+                    "class": "fa-briefcase"
+                },
+                {
+                    "key": "Skills",
+                    "class": "fa-code"
+                },
+                {
+                    "key": "Achievement",
+                    "class": "fa-award"
+                },
+                {
+                    "key": "Certification",
+                    "class": "fa-certificate"
+                },
+                {
+                    "key": "Projects",
+                    "class": "fa-diagram-project"
+                },
+                {
+                    "key": "Activities",
+                    "class": "fa-cubes"
+                }
+            ]
+        }
     },
-    
-        "profile":{
-            "imgUrl":"/assets/profile.jpg",
-            "pname":"VINOD G",
-            "heading":"Full Stack Software Developer",
-            "btnLinks":[
+    "profile": {
+        "imgUrl": "/assets/profile.jpg",
+        "pname": "VINOD G",
+        "heading": "Full Stack Software Developer",
+        "btnLinks": [
+            {
+                "text": "G-Mail",
+                "icon": "fa-solid fa-square-envelope",
+                "href": "mailto:vinodgowda1998@gmail.com",
+                "target": "_blank"
+            },
+            {
+                "text": "Contact",
+                "icon": "fa-solid fa-phone",
+                "href": "tel:8073869494",
+                "target": ""
+            },
+            {
+                "text": "LinkedIn",
+                "icon": "fa-brands fa-linkedin",
+                "href": "https://www.linkedin.com/in/vinod-g-981259194/",
+                "target": "_blank"
+            },
+            {
+                "text": "GitHub",
+                "icon": "fa-brands fa-github",
+                "href": "https://github.com/vinodg8073",
+                "target": "_blank"
+            }
+        ],
+        "bio": {
+            "heading": "Bio :",
+            "greet": "Hello,",
+            "description": "I'm a Software Developer with experience in building both front end and back end web applications using popular frameworks. Experience with source control systems Git. Continuously involved in learning process.",
+            "text2": "Hobbies :",
+            "description2": "Sports, Flying FPV Drone, Trekking."
+        },
+        "info": {
+            "heading": "Information :",
+            "table": [
                 {
-                    "text":"G-Mail",
-                    "icon":"fa-solid fa-square-envelope",
-                    "href":"mailto:vinodgowda1998@gmail.com",
-                    "target":"_blank"
+                    "key": "Gender",
+                    "value": "Male"
                 },
                 {
-                    "text":"Contact",
-                    "icon":"fa-solid fa-phone",
-                    "href":"tel:8073869494",
-                    "target":""
+                    "key": "DOB",
+                    "value": "17/08/1998"
                 },
                 {
-                    "text":"LinkedIn",
-                    "icon":"fa-brands fa-linkedin",
-                    "href":"https://www.linkedin.com/in/vinod-g-981259194/",
-                    "target":"_blank"
-                },
-                {
-                    "text":"GitHub",
-                    "icon":"fa-brands fa-github",
-                    "href":"https://github.com/vinodg8073",
-                    "target":"_blank"
+                    "key": "Address",
+                    "value": "Bheemasandra, SSMC Post, Tumkur, Karnataka 572107."
                 }
             ],
-            "bio":{
-                "heading":"Bio :",
-                "greet":"Hello,",
-                "description":"I'm a Software Developer with experience in building both front end and back end web applications using popular frameworks. Experience with source control systems Git. Continuously involved in learning process.",
-                "text2":"Hobbies :",
-                "description2":"Sports, Flying FPV Drone, Trekking."
-            },
-            "info":{
-                "heading":"Information :",
-                "table":[
-                    {   
-                        "key":"Gender",
-                        "value":"Male"
-                    },
-                    {
-                        "key":"DOB",
-                        "value":"17/08/1998"
-                    },
-                    {
-                        "key":"Address",
-                        "value":"Bheemasandra, SSMC Post, Tumkur, Karnataka 572107."
-                    }
-                ],
-                "text1":"You can get in touch with me here :",
-                "btns":[
-                    {
-                        "text":"+91-8073869494",
-                        "icon":"fa-solid fa-phone",
-                        "href":"tel:8073869494"
-                    },
-                    {
-                        "text":"vinodgowda1998@gmail.com",
-                        "icon":"fa-solid fa-square-envelope",
-                        "href":"mailto:vinodgowda1998@gmail.com"
-                    }
-                ]
-            }
-        },
-    
-    "education":{
-        "heading":"Education :",
-        "details":[
+            "text1": "You can get in touch with me here :",
+            "btns": [
+                {
+                    "text": "+91-8073869494",
+                    "icon": "fa-solid fa-phone",
+                    "href": "tel:8073869494"
+                },
+                {
+                    "text": "vinodgowda1998@gmail.com",
+                    "icon": "fa-solid fa-square-envelope",
+                    "href": "mailto:vinodgowda1998@gmail.com"
+                }
+            ]
+        }
+    },
+    "education": {
+        "heading": "Education :",
+        "colleges": [
             {
-                "college":"Sri Siddhartha Institute of Technology",
-                "course":"Bachelor of Engineering : Electrical and Electronics Engineering",
-                "result":"CGPA : 7.81",
-                "year":"Aug 2017 - Aug 2021"
+                "collegeName": "Sri Siddhartha Institute of Technology ",
+                "course": "Bachelor of Engineering : Electrical and Electronics Engineering",
+                "year": "Aug 2017 - Aug 2021",
+                "result": "CGPA : 7.81"
             }
         ]
     },
-    "experience":{
-        "heading":"Experience :",
-        "details":[
+    "experience": {
+        "heading": "Experience :",
+        "details": [
             {
-                "company":"Amiti Software Technologies Private Limited",
-                "year":"May 2022 - Present",
-                "designations":[
+                "company": "Amiti Software Technologies Private Limited",
+                "year": "May 2022 - Present",
+                "designations": [
                     {
-                        "designation":"Software Developer",
-                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                        "designation": "Software Developer",
+                        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     },
                     {
-                        "designation":"Trainee Software Developer",
-                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                        "designation": "Trainee Software Developer",
+                        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     }
                 ]
             },
             {
-                "company":"Amiti Software Technologies Private Limited",
-                "year":"May 2022 - Present",
-                "designations":[
+                "company": "Amiti Software Technologies Private Limited",
+                "year": "May 2022 - Present",
+                "designations": [
                     {
-                        "designation":"Software Developer",
-                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                        "designation": "Software Developer",
+                        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     },
                     {
-                        "designation":"Trainee Software Developer",
-                        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
+                        "designation": "Trainee Software Developer",
+                        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio ad ex recusandae aliquid debitis doloremque aperiam illo pariatur mollitia? Cupiditate necessitatibus aperiam fuga saepe earum rerum perspiciatis quisquam officia facilis nesciunt! Iusto aspernatur asperiores, nihil dolorem obcaecati repellendus provident modi, blanditiis quaerat quis excepturi nulla, illo eos officiis animi."
                     }
                 ]
             }
