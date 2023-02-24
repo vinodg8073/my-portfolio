@@ -6,10 +6,11 @@
   <side-panel-vue></side-panel-vue>
   <!-- <div class="mainview"><demo-vue></demo-vue></div> -->
   <div class="mainview"><router-view /></div>
-  
+  <pop-up></pop-up>
 
 </template>
 <script>
+import PopUp from './components/popUp.vue';
 // @ is an alias to /src
 import SidePanelVue from './components/SidePanel.vue';
 // import demoVue from './components/demo.vue';
@@ -17,12 +18,13 @@ export default {
   
   components: {
     SidePanelVue,
+    PopUp,
     // demoVue
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
