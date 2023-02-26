@@ -18,22 +18,19 @@
 
 <script>
 export default {
+    props:['certificateData'],
     data() {
         return {
             certificates: {}
         }
     },
     methods: {
-        fetchEducationData() {
-            fetch("certificates.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.certificates = data.certificates;
-                });
+        setData() {
+            this.certificates=this.certificateData;
         },
     },
-    created() {
-        this.fetchEducationData();
+    updated() {
+        this.setData();
     },
 }
 </script>

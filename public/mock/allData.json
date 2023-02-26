@@ -159,5 +159,119 @@
                 ]
             }
         ]
+    },
+    "skills":{
+        "heading":"Skills :",
+        "languages":[
+            {
+                "language":"HTML",
+                "percentage":"85",
+                "color":"red"
+            },
+            {
+                "language":"CSS",
+                "percentage":"70",
+                "color":"dodgerblue"
+            },
+            {
+                "language":"JAVASCRIPT",
+                "percentage":"75",
+                "color":"yellow"
+            },
+            {
+                "language":"VUE JS",
+                "percentage":"75",
+                "color":"green"
+            },
+            {
+                "language":"STENCIL JS",
+                "percentage":"65",
+                "color":"darkslategray"
+            },
+            {
+                "language":"JAVA",
+                "percentage":"85",
+                "color":"red"
+            },
+            {
+                "language":"SPRING",
+                "percentage":"70",
+                "color":"green"
+            },
+            {
+                "language":"GIT",
+                "percentage":"80",
+                "color":"brown"
+            },
+            {
+                "language":"BOOTSTRAP",
+                "percentage":"75",
+                "color":"purple"
+            }
+        ]
+    },
+    "achievements":{
+        "heading":"Achievements :",
+        "allAchievements":[
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            }
+        ]
+    },
+    "certificates":{
+        "heading":"Certificates :",
+        "allCertificates":[
+            {
+                "imgUrl":"/assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            }
+        ]
+    },
+    "projects":{
+        "heading":"Projects :",
+        "allProjects":[
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            },
+            {
+                "imgUrl":"assets/logo.png",
+                "heading2":"Row-Boatics   (2020)",
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+            }
+        ]
+    },
+    "activities":{
+        "heading":"Activities :",
+        "activitiesList":[
+            {
+                "activity":"Lead a technical team called <strong><a href='https://ssit.edu.in/varsity-circle/' style='text-decoration: none;'>Varsity Circle</a></strong>. Currently I'm one of the advisory board member"
+            }
+        ]
     }
+
 }
