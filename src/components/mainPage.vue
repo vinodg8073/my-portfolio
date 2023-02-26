@@ -1,14 +1,12 @@
 <template>
       <div ref="Profile"><my-profile-vue :profile="profile"></my-profile-vue></div>
       <div ref="Education" ><my-education :educationData="education"></my-education></div>
-      <div ref="Experience">
-        <my-experience :experienceData="experiences"></my-experience>
-      </div>
-      <div ref="Skills"><my-skills></my-skills></div>
-      <div ref="Achievement"><myAchievments></myAchievments></div>
-      <div ref="Certification"><my-certificates-vue></my-certificates-vue></div>
-      <div ref="Projects"><myProjects></myProjects></div>
-      <div ref="Activities"><myActivities></myActivities></div>
+      <div ref="Experience"><my-experience :experienceData="experiences"></my-experience></div>
+      <div ref="Skills"><my-skills :skillsData="skills"></my-skills></div>
+      <div ref="Achievement"><myAchievments :achievementData="achievement"></myAchievments></div>
+      <div ref="Certification"><my-certificates-vue :certificateData="certificates"></my-certificates-vue></div>
+      <div ref="Projects"><myProjects :projectsData="projects"></myProjects></div>
+      <div ref="Activities"><myActivities :activitiesData="activities"></myActivities></div>
 </template>
 
 
@@ -40,7 +38,12 @@ export default {
     return{
       experiences:{},
       profile:{},
-      education:{}
+      education:{},
+      skills:{},
+      achievement:{},
+      certificates:{},
+      projects:{},
+      activities:{}
     }
   },
   methods: {
@@ -51,12 +54,17 @@ export default {
     },
     fetchAllData() {
       
-            fetch("allData.json")
+            fetch("mock/allData.json")
                 .then((response) => response.json())
                 .then((data) => {
                     this.experiences = data.experience;
                     this.profile=data.profile;
                     this.education=data.education;
+                    this.skills=data.skills,
+                    this.achievement=data.achievements,
+                    this.certificates=data.certificates,
+                    this.projects=data.projects,
+                    this.activities=data.activities
                 });
         },
   },

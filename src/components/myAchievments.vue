@@ -17,22 +17,19 @@
 
 <script>
 export default {
+    props:['achievementData'],
     data() {
         return {
             achievements: {}
         }
     },
     methods: {
-        fetchEducationData() {
-            fetch("achievements.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.achievements = data.achievements;
-                });
+        setAchievementsData() {
+            this.achievements=this.achievementData
         },
     },
-    created() {
-        this.fetchEducationData();
+    updated() {
+        this.setAchievementsData();
     },
 }
 </script>

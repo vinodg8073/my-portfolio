@@ -1,30 +1,29 @@
 <template>
   <nav class="sideBar">
-    <div class="bar">
-      <input type="checkbox" id="menubar" />
-      <label for="menubar"><i class="fa-solid fa-bars"></i></label>
-    </div>
-
+      <button class="bar" @click="setView()"><i class="fa-solid fa-bars"></i></button>
     <div class="profile">
       <img class="profile-img" :src="`${top.imgUrl}`" alt="" />
       <h1 style="margin-bottom: 0px">{{ top.name }}</h1>
       <h3>{{ top.heading }}</h3>
       <div class="resume">
         <h2><i class="fa-solid fa-file-alt"></i> {{ top.heading2 }}</h2>
-        <button class="btn" v-for="btn in top.btns" :key="btn">
-          <a href="">{{ btn }}</a>
+        <button class="btn" v-for="btn in top.btns" :key="btn" @click="downloadResume()">
+          {{ btn }}
         </button>
       </div>
       <h2 class="menu-title">{{ bottom.title }}</h2>
     </div>
 
     <div class="view">
-      <ul>
+     
+      <ul v-if="!mobileView">
         <li v-for="data in menus" :key="data">
-          <button @click="scrollToPage(`${data.key}`)">
+          <button  class="btn2" @click="scrollToPage(`${data.key}`)">
             <i :class="`icon fa-solid ${data.class}`"></i> {{ data.key }}
           </button>
         </li>
+        <li><div class="mobileView"><button class="btn md"  @click="downloadResume(), mobileView=true">Download Resume</button></div></li>
+      
       </ul>
     </div>
   </nav>
@@ -40,14 +39,27 @@ export default {
       menus: [],
       top: {},
       bottom: {},
+      mobileView:false
     };
   },
   methods: {
     scrollToPage(str) {
       window.mitt.emit("scroll", str);
+      this.mobileView=true
+    },
+    downloadResume(){
+      
+      window.mitt.emit('popup','vla')
+      
+    },
+    downloadResume1(){
+      if(this.mobileView){
+      this.mobileView=false;
+        console.log('moooo')
+    }
     },
     getAllData() {
-      fetch("allData.json")
+      fetch("mock/allData.json")
         .then((response) => response.json())
         .then((data) => {
           this.allData = data;
@@ -56,10 +68,20 @@ export default {
           this.bottom = data.sidePanel.bottom;
         });
     },
+    setView(){
+      console.log('view set')
+      if(this.mobileView){
+        this.mobileView=false
+      }
+      else this.mobileView=true;
+    },
   },
   created() {
     this.getAllData();
   },
+  updated(){
+    // this.mobileView=false;
+  }
 };
 </script>
 
@@ -96,7 +118,7 @@ h2 {
   width: 100px;
   padding-top: 4px;
 }
-button {
+.btn2  {
   background: none;
   border: none;
   text-decoration: none;
@@ -112,13 +134,14 @@ button {
   border-radius: 5px;
   background: linear-gradient(to right, rgb(131, 35, 35), rgb(32, 69, 163));
   cursor: pointer;
-}
-.btn a {
   text-decoration: none;
   color: aliceblue;
-  font-size: 23px;
+  font-size: 25px;
 }
 
+.md{
+  width: 40%;
+}
 .resume {
   padding: 4px;
   border-radius: 20px;
@@ -128,9 +151,7 @@ button {
   text-align: left;
   padding-left: 10%;
 }
-.icon {
-  width: 30px;
-}
+
 li {
   list-style: none;
   font-size: 20px;
@@ -144,6 +165,13 @@ ul {
   margin-top: -5px;
 }
 
+.mobileView{
+  display: none;
+}
+
+.bar{
+  display: none;
+}
 @media (min-width: 0) and (max-width: 979px) {
   .profile {
     display: none;
@@ -154,25 +182,35 @@ ul {
     border: 2px solid black;
     float: left;
     text-align: center;
-    /* left: %; */
     padding: 0;
     border: none;
     color: blue;
   }
 
   .sideBar {
-    display: none;
+    display: block;
     float: none;
     width: 100%;
+    background: none;
   }
-
-  #menubar,
-  .bar {
+  .mobileView{
     display: block;
-    float: right;
-    margin-right: 30px;
-    font-size: 30px;
-    color: rgba(205, 28, 28, 0.636);
   }
+  #menubar,.bar
+ {  
+  display: block;
+    margin-right: 3%;
+    margin-top: 2%;
+    z-index: 1;
+    position: fixed;
+    right: 0;
+  }
+  ul{
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .md{
+  width: 70%;
+}
 }
 </style>

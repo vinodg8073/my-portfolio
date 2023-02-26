@@ -5,7 +5,7 @@
             <div class="project" v-for="project in projects.allProjects" :key="project">
                 <img  class="pimg" :src="`${project.imgUrl}`">
                 <div class="content">
-                <h1>{{ project.heading2 }}</h1>
+                <h1 class="phead">{{ project.heading2 }}</h1>
                 <p>{{project.details}}</p>
             </div>
             </div>
@@ -17,22 +17,19 @@
 
 <script>
     export default {
+        props:['projectsData'],
         data(){
             return{
                 projects:{}
             }
         },
         methods: {
-        fetchSkillsData() {
-            fetch("projects.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.projects = data.projects;
-                });
+        setData() {
+            this.projects=this.projectsData;
         },
     },
-    created() {
-        this.fetchSkillsData();
+    updated() {
+        this.setData();
     },
     }
 </script>
@@ -78,7 +75,7 @@ h1{
     .project{
         margin: 15px;
     }
-    h1{
+    .phead{
         font-size: 20px;
     }
 }

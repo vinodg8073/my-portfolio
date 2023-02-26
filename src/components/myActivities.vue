@@ -11,22 +11,19 @@
 
 <script>
     export default {
+        props:['activitiesData'],
         data(){
             return{
                 activities:{}
             }
         },
         methods: {
-        fetchSkillsData() {
-            fetch("projects.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.activities = data.activities;
-                });
+            setData() {
+           this.activities=this.activitiesData;
         },
     },
-    created() {
-        this.fetchSkillsData();
+    updated() {
+        this.setData();
     },
     }
 </script>

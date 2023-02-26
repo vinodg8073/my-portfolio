@@ -16,22 +16,19 @@
 <script>
     export default {
        name:'my-skills' ,
+       props:['skillsData'],
        data(){
             return{
                 skills:{}
             }
         },
         methods: {
-        fetchSkillsData() {
-            fetch("skills.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    this.skills = data.skills;
-                });
+        setSkillsData() {
+            this.skills=this.skillsData;
         },
     },
-    created() {
-        this.fetchSkillsData();
+    updated() {
+        this.setSkillsData();
     },
     }
 </script>
