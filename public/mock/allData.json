@@ -216,12 +216,14 @@
             {
                 "imgUrl":"assets/logo.png",
                 "heading2":"Row-Boatics   (2020)",
-                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)",
+                "slide": "right"
             },
             {
                 "imgUrl":"assets/logo.png",
                 "heading2":"Row-Boatics   (2020)",
-                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)"
+                "details":"Cleared 2nd round International Compitetion conducted by Indian Institute of Technology-Bombay (IITB)",
+                "slide": "left"
             }
         ]
     },

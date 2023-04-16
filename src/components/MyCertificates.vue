@@ -5,7 +5,7 @@
         </i>
 
         <div class="certificates">
-            <div class="certificate-card" v-for="certificate in certificates.allCertificates" :key="certificate">
+            <div class="certificate-card" v-for="certificate in certificates.allCertificates" :key="certificate" data-aos="zoom-in-up">
                 <img class="certificate-img" :src="`${certificate.imgUrl}`" alt="">
                 <div class="details">
                     <h3>{{ certificate.heading2 }}</h3>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
 export default {
     props:['certificateData'],
     data() {
@@ -32,6 +33,16 @@ export default {
     updated() {
         this.setData();
     },
+    mounted(){
+        AOS.init(
+            {
+                offset: 40, 
+                delay: 100, 
+                duration: 2000, 
+                easing: 'ease', 
+            }
+        );
+    }
 }
 </script>
 

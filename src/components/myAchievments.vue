@@ -3,8 +3,8 @@
         <i class="heading">
             <h1>{{ achievements.heading }}</h1>
         </i>
-        <div class="achievements-list">
-            <div class="achievement" v-for="achievement in achievements.allAchievements" :key="achievement">
+        <div class="achievements-list" >
+            <div class="achievement" v-for="achievement in achievements.allAchievements" :key="achievement" :data-aos="`fade-${achievement.slide}`">
                 <img class="img1" :src="`${achievement.imgUrl}`" alt="">
                 <div class="details">
                     <h3>{{ achievement.heading2 }}</h3>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import AOS from 'aos'
+
 export default {
     props:['achievementData'],
     data() {
@@ -31,6 +33,16 @@ export default {
     updated() {
         this.setAchievementsData();
     },
+    mounted(){
+        AOS.init(
+            {
+                offset: 40, 
+                delay: 0, 
+                duration: 1000, 
+                easing: 'ease', 
+            }
+        );
+    }
 }
 </script>
 

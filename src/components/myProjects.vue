@@ -2,7 +2,7 @@
     <div class="container">
         <i class="heading" stye><h1>{{projects.heading}}</h1></i>
         <div class="projects-list">
-            <div class="project" v-for="project in projects.allProjects" :key="project">
+            <div class="project" v-for="project in projects.allProjects" :key="project" data-aos="slide-left">
                 <img  class="pimg" :src="`${project.imgUrl}`">
                 <div class="content">
                 <h1 class="phead">{{ project.heading2 }}</h1>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
     export default {
         props:['projectsData'],
         data(){
@@ -31,6 +32,16 @@
     updated() {
         this.setData();
     },
+    mounted(){
+        AOS.init(
+            {
+                offset: 40, 
+                delay: 100, 
+                duration: 2000, 
+                easing: 'ease', 
+            }
+        );
+    }
     }
 </script>
 
