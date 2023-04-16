@@ -8,6 +8,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(fas, far, fab)
 dom.watch();
+// import AOS from 'aos'
+import 'aos/dist/aos.css'
 import mitt from 'mitt';
 const emitter = mitt();
 const app=createApp(App)

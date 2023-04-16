@@ -45,7 +45,9 @@ export default {
   methods: {
     scrollToPage(str) {
       window.mitt.emit("scroll", str);
-      this.mobileView=true
+      if(window.screen.width<920){
+      this.mobileView=true}
+       
     },
     downloadResume(){
       
@@ -79,8 +81,11 @@ export default {
   created() {
     this.getAllData();
   },
+  mounted(){
+    if(window.screen.width<920){
+      this.mobileView=true}
+  },
   updated(){
-    // this.mobileView=false;
   }
 };
 </script>

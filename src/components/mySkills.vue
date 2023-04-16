@@ -4,7 +4,7 @@
         <ul>
             <span v-for="skill in skills.languages" :key="skill" >
             <li >
-                <h3 class="bar">{{ skill.language }}</h3><div :class="`p${skill.percentage} right`" :style="`background-color: ${skill.color}`"></div>
+                <h3 class="bar">{{ skill.language }}</h3><div :class="`p${skill.percentage} right`" :style="`background-color: ${skill.color}`" data-aos="fade-right"></div>
                 <span class="percentage">{{skill.percentage}}%</span>
             </li>
             <br>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
     export default {
        name:'my-skills' ,
        props:['skillsData'],
@@ -30,6 +31,17 @@
     updated() {
         this.setSkillsData();
     },
+    mounted(){
+        AOS.init(
+            {
+                offset: 10, 
+                delay: 100, 
+                duration: 2000, 
+                easing: 'ease', 
+                mirror: true,
+            }
+        );
+    }
     }
 </script>
 

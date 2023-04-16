@@ -11,7 +11,7 @@
                 <h1>{{ profileDatas.heading }}</h1>
                 <ul>
                     <li v-for="btn of profileDatas.btnLinks" :key="btn">
-                        <a href="`${btn.href}`" target="`${btn.target}`"><i :class="`${btn.icon}`"></i>
+                        <a href="`${btn.href}`" target="`${btn.target}`"><i :class="`${btn.icon} icon`"></i>
                             &nbsp;
                             <p class="p">{{ btn.text }}</p>
                         </a>
@@ -284,9 +284,16 @@ p.p {
     }
 
     li a {
-        padding: 15px;
-        /* font-size: 20px; */
-    }
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 10px;
+    margin-top: -3px;
+    border: 2px solid rgb(89, 89, 232);
+    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
+    font-size: 25px;
+}
+    
 
     p.p {
         font-size: 20px;
@@ -306,17 +313,20 @@ p.p {
 
     li {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
     }
 
     li a {
         padding: 0 10px;
-        font-size: 12px;
+        font-size: 25px;
     }
 
     p.p {
         font-size: 12px;
         display: block;
+    }
+    .icon{
+       padding-left: 13px;
     }
 }
 
