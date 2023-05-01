@@ -192,9 +192,9 @@ span {
 .bio {
     text-align: center;
     display: inline-block;
-    border: black 2px solid;
+    /* border: black 2px solid; */
     padding: 10px;
-    background: rgba(170, 185, 236, 0.6);
+    /* background: rgba(106, 139, 246, 0.6); */
     border-radius: 10px;
     min-width: 40%;
     margin: 5px;
@@ -203,7 +203,7 @@ span {
 .bio:hover {
     border: rgb(11, 4, 111) 2px solid;
     padding: 12px;
-    background: rgba(4, 17, 59, 0.6);
+    background: rgba(0, 0, 0, 1);
     margin: auto;
 }
 
@@ -287,10 +287,10 @@ p.p {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     color: aliceblue;
-    padding: 10px;
+    padding: 300px;
     margin-top: -3px;
     border: 2px solid rgb(89, 89, 232);
-    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.7);
+    box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.3);
     font-size: 25px;
 }
     
@@ -299,6 +299,14 @@ p.p {
         font-size: 20px;
         display: inline;
     }
+    .bio {
+    border: rgb(5, 3, 38) 2px solid;
+    padding: 12px;
+    font-size: large;
+    color: antiquewhite;
+    background: rgba(0, 0, 0, 1);
+    margin: auto;
+}
 }
 
 @media (min-width: 0) and (max-width: 420px) {
@@ -317,7 +325,7 @@ p.p {
     }
 
     li a {
-        padding: 0 10px;
+        padding: 0 15px;
         font-size: 25px;
     }
 
