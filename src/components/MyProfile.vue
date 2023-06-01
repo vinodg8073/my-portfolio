@@ -287,7 +287,7 @@ p.p {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     color: aliceblue;
-    padding: 300px;
+    padding: 0 15px;
     margin-top: -3px;
     border: 2px solid rgb(89, 89, 232);
     box-shadow: 10px 5px 10px 2px rgba(70, 123, 228, 0.3);
