@@ -45,8 +45,6 @@ export default {
   methods: {
     scrollToPage(str) {
       window.mitt.emit("scroll", str);
-      if(window.screen.width<920){
-      this.mobileView=true}
        
     },
     downloadResume(){
@@ -77,15 +75,17 @@ export default {
       }
       else this.mobileView=true;
     },
+    screenSize(){
+      if(window.innerWidth<=980){
+      this.mobileView=true}
+      else if (window.innerWidth>980){
+      this.mobileView=false;
+    }
+    }
   },
   created() {
     this.getAllData();
-  },
-  mounted(){
-    if(window.screen.width<920){
-      this.mobileView=true}
-  },
-  updated(){
+    addEventListener('resize',this.screenSize)
   }
 };
 </script>
